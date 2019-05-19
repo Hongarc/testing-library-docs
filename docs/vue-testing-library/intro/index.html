@@ -1,0 +1,201 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Vue Testing Library · Testing Library</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;[&lt;code&gt;vue-testing-library&lt;/code&gt;][gh] is a lightweight adapter allowing&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Vue Testing Library · Testing Library"/><meta property="og:type" content="website"/><meta property="og:url" content="https://hongarc.github.io/testing-library-docs/"/><meta property="og:description" content="&lt;p&gt;[&lt;code&gt;vue-testing-library&lt;/code&gt;][gh] is a lightweight adapter allowing&lt;/p&gt;
+"/><meta property="og:image" content="https://hongarc.github.io/testing-library-docs/img/octopus-128x128.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://hongarc.github.io/testing-library-docs/img/octopus-128x128.png"/><link rel="shortcut icon" href="/testing-library-docs/img/octopus-32x32.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://hongarc.github.io/testing-library-docs/blog/atom.xml" title="Testing Library Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://hongarc.github.io/testing-library-docs/blog/feed.xml" title="Testing Library Blog RSS Feed"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-137787095-1', 'auto');
+              ga('send', 'pageview');
+            </script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:500,700|Source+Code+Pro:500,700|Source+Sans+Pro:400,400i,700"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script type="text/javascript" src="/js/sidenav.js"></script><link rel="stylesheet" href="/testing-library-docs/css/prism.css"/><link rel="stylesheet" href="/testing-library-docs/css/main.css"/><script src="/testing-library-docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/testing-library-docs/"><img class="logo" src="/testing-library-docs/img/octopus-64x64.png" alt="Testing Library"/><h2 class="headerTitleWithLogo">Testing Library</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/testing-library-docs/docs/intro" target="_self">Docs</a></li><li class=""><a href="/testing-library-docs/docs/recipes" target="_self">Recipes</a></li><li class=""><a href="/testing-library-docs/help" target="_self">Help</a></li><li class=""><a href="/testing-library-docs/blog/" target="_self">Blog</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Frameworks</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Getting Started</h3><ul class=""><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/intro">Introduction</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/guiding-principles">Guiding Principles</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Frameworks</h3><ul class=""><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">DOM Testing Library</h4><ul><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/dom-testing-library/intro">Introduction</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/dom-testing-library/install">Install</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/dom-testing-library/example-intro">Example</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/dom-testing-library/setup">Setup</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/dom-testing-library/api-queries">Queries</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/dom-testing-library/api-events">Firing Events</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/dom-testing-library/api-async">Async Utilities</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/dom-testing-library/api-helpers">Helpers</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/dom-testing-library/api-configuration">Configuration</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/dom-testing-library/faq">FAQ</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/dom-testing-library/cheatsheet">Cheatsheet</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">React Testing Library</h4><ul><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/react-testing-library/intro">Introduction</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/react-testing-library/example-intro">Example</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/react-testing-library/setup">Setup</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/react-testing-library/api">API</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/react-testing-library/faq">FAQ</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/react-testing-library/cheatsheet">Cheatsheet</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">ReasonReact Testing Library</h4><ul><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/bs-react-testing-library/intro">Introduction</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/bs-react-testing-library/examples">Examples</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Native Testing Library</h4><ul><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/native-testing-library/intro">Intro</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/native-testing-library/example-intro">Example</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/native-testing-library/setup">Setup</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/native-testing-library/api">API</a></li></ul></div><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/cypress-testing-library/intro">Cypress Testing Library</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/svelte-testing-library/intro">Svelte Testing Library</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/testing-library-docs/docs/vue-testing-library/intro">Vue Testing Library</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/angular-testing-library/intro">Angular Testing Library</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/pptr-testing-library/intro">Puppeteer Testing Library</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/testcafe-testing-library/intro">Testcafe Testing Library</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Ecosystem</h3><ul class=""><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/ecosystem-user-event">user-event</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/ecosystem-jest-dom">jest-dom</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/ecosystem-bs-jest-dom">bs-jest-dom</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/ecosystem-jest-native">jest-native</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/testing-library/testing-library-docs/blob/master/docs/vue-testing-library/intro.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">Vue Testing Library</h1></header><article><div><span><p><a href="https://github.com/dfcook/vue-testing-library"><code>vue-testing-library</code></a> is a lightweight adapter allowing
+<code>dom-testing-library</code> to be used to test <a href="https://vuejs.org/">Vue</a> components
+built on top of <code>@vue/test-utils</code>.</p>
+<pre><code class="hljs">npm install <span class="token operator">--</span>save<span class="token operator">-</span>dev vue vue<span class="token operator">-</span>testing<span class="token operator">-</span>library
+</code></pre>
+<ul>
+<li><a href="https://github.com/dfcook/vue-testing-library">vue-testing-library on GitHub</a></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="usage"></a><a href="#usage" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Usage</h2>
+<pre><code class="hljs">npm install <span class="token operator">--</span>save<span class="token operator">-</span>dev vue<span class="token operator">-</span>testing<span class="token operator">-</span>library
+                       jest
+                       vue<span class="token operator">-</span>jest
+                       babel<span class="token operator">-</span>jest
+                       babel<span class="token operator">-</span>preset<span class="token operator">-</span>env
+                       babel<span class="token operator">-</span>plugin<span class="token operator">-</span>transform<span class="token operator">-</span>runtime
+</code></pre>
+<pre><code class="hljs"><span class="token comment">// package.json</span>
+  <span class="token string">"scripts"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">"test"</span><span class="token punctuation">:</span> <span class="token string">"jest"</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token string">"jest"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">"moduleDirectories"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
+      <span class="token string">"node_modules"</span><span class="token punctuation">,</span>
+      <span class="token string">"src"</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token string">"moduleFileExtensions"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
+      <span class="token string">"js"</span><span class="token punctuation">,</span>
+      <span class="token string">"vue"</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token string">"testPathIgnorePatterns"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
+      <span class="token string">"/node_modules/"</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token string">"transform"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token string">"^.+\\.js$"</span><span class="token punctuation">:</span> <span class="token string">"&lt;rootDir>/node_modules/babel-jest"</span><span class="token punctuation">,</span>
+      <span class="token string">".*\\.(vue)$"</span><span class="token punctuation">:</span> <span class="token string">"&lt;rootDir>/node_modules/vue-jest"</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+<span class="token comment">// .babelrc</span>
+<span class="token punctuation">{</span>
+  <span class="token string">"presets"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">[</span><span class="token string">"env"</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+      <span class="token string">"modules"</span><span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+      <span class="token string">"targets"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">"browsers"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">"> 1%"</span><span class="token punctuation">,</span> <span class="token string">"last 2 versions"</span><span class="token punctuation">,</span> <span class="token string">"not ie &lt;= 8"</span><span class="token punctuation">]</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">]</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token string">"plugins"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    <span class="token string">"transform-runtime"</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token string">"env"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">"test"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token string">"presets"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">"env"</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// src/TestComponent.vue</span>
+<span class="token operator">&lt;</span>template<span class="token operator">></span>
+  <span class="token operator">&lt;</span>div<span class="token operator">></span>
+    <span class="token operator">&lt;</span>span data<span class="token operator">-</span>testid<span class="token operator">=</span><span class="token string">"test1"</span><span class="token operator">></span>Hello World<span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">></span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">></span>
+
+<span class="token comment">// src/TestComponent.spec.js</span>
+<span class="token keyword">import</span> <span class="token string">'jest-dom/extend-expect'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> render <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue-testing-library'</span>
+<span class="token keyword">import</span> TestComponent <span class="token keyword">from</span> <span class="token string">'./TestComponent'</span>
+
+<span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'should render HelloWorld'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> queryByTestId <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">render</span><span class="token punctuation">(</span>TestComponent<span class="token punctuation">)</span>
+  <span class="token function">expect</span><span class="token punctuation">(</span><span class="token function">queryByTestId</span><span class="token punctuation">(</span><span class="token string">'test1'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toHaveTextContent</span><span class="token punctuation">(</span><span class="token string">'Hello World'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<p>You can now use all of <code>dom-testing-library</code>'s <code>getBy</code>, <code>getAllBy</code>, <code>queryBy</code>
+and <code>queryAllBy</code> commands. See <a href="/testing-library-docs/docs/dom-testing-library/api-queries">here</a> for
+usage.</p>
+<h3><a class="anchor" aria-hidden="true" id="render"></a><a href="#render" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>render</h3>
+<p>The <code>render</code> function takes up to 3 parameters and returns an object with some
+helper methods</p>
+<ol>
+<li>Component - the Vue component to be tested.</li>
+<li>RenderOptions - an object containing additional information to be passed to
+@vue/test-utils mount. This can include:</li>
+</ol>
+<ul>
+<li><p>store - The object definition of a Vuex store, if present <code>render</code> will
+configure a Vuex store and pass to mount.</p></li>
+<li><p>routes - A set of routes, if present render will configure VueRouter and pass
+to mount.</p>
+<p>All additional render options are passed to the vue-test-utils mount function
+in its options.</p></li>
+</ul>
+<ol start="3">
+<li>configurationCb - A callback to be called passing the Vue instance when
+created. This allows 3rd party plugins to be installed prior to mount.</li>
+</ol>
+<h3><a class="anchor" aria-hidden="true" id="forwarded-methods-from-dom-testing-library"></a><a href="#forwarded-methods-from-dom-testing-library" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Forwarded methods from dom-testing-library</h3>
+<p>vue-testing-library forwards all exports from dom-testing-library but it alters
+<code>fireEvent</code> so that all events are async (ie: <code>await fireEvent.click(button)</code>)</p>
+<p>In particular, the <code>wait</code> utility can be very important in Vue components,
+@vue/test-utils has succeeded in making the majority of updates happen
+synchronously however there are occasions when wait will allow the DOM to
+update. For example, see
+<a href="https://github.com/dfcook/vue-testing-library/tree/master/tests/__tests__/validate-plugin.js"><code>here</code></a>.</p>
+<h2><a class="anchor" aria-hidden="true" id="examples"></a><a href="#examples" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Examples</h2>
+<p>You'll find examples of testing with different libraries in
+<a href="https://github.com/dfcook/vue-testing-library/tree/master/tests/__tests__">the test directory</a>.
+Some included are:</p>
+<ul>
+<li><a href="https://github.com/dfcook/vue-testing-library/tree/master/tests/__tests__/vuex.js"><code>vuex</code></a></li>
+<li><a href="https://github.com/dfcook/vue-testing-library/tree/master/tests/__tests__/vue-router.js"><code>vue-router</code></a></li>
+<li><a href="https://github.com/dfcook/vue-testing-library/tree/master/tests/__tests__/validate-plugin.js"><code>vee-validate</code></a></li>
+</ul>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 4/5/2019</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/testing-library-docs/docs/svelte-testing-library/intro"><span class="arrow-prev">← </span><span>Svelte Testing Library</span></a><a class="docs-next button" href="/testing-library-docs/docs/angular-testing-library/intro"><span>Angular Testing Library</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#usage">Usage</a><ul class="toc-headings"><li><a href="#render">render</a></li><li><a href="#forwarded-methods-from-dom-testing-library">Forwarded methods from dom-testing-library</a></li></ul></li><li><a href="#examples">Examples</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/testing-library-docs/" class="nav-home"><img src="/testing-library-docs/img/octopus-128x128.png" alt="Testing Library" width="66" height="58"/></a><div><h5>Docs</h5><a href="/testing-library-docs/docs/intro">Getting Started</a><a href="/testing-library-docs/docs/example-codesandbox">Examples</a><a href="/testing-library-docs/docs/dom-testing-library/api-queries">API</a><a href="/testing-library-docs/docs/dom-testing-library/faq">Help</a></div><div><h5>Community</h5><a href="/testing-library-docs/blog">Blog</a><a target="_blank" rel="noreferrer noopener" href="https://stackoverflow.com/questions/tagged/react-testing-library">Stack Overflow</a><a target="_blank" rel="noreferrer noopener" href="https://www.reactiflux.com/">Reactiflux on Discord</a><a target="_blank" rel="noreferrer noopener" href="https://spectrum.chat/testing-library">Spectrum</a></div><div><h5>More</h5><a target="_blank" rel="noreferrer noopener" class="github-button" href="https://github.com/testing-library/react-testing-library" data-icon="octicon-star" data-count-href="/testing-library/react-testing-library/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a><a target="_blank" rel="noreferrer noopener" href="https://github.com/testing-library">GitHub</a><a target="_blank" rel="noreferrer noopener" href="https://github.com/testing-library/testing-library-docs">Edit Docs on GitHub</a></div></section><section class="copyright">Copyright © 2018-2019 Kent C. Dodds and contributors</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: 'bda29e6557dc5be1ce5c05f2dbff8f33',
+                indexName: 'testing-library',
+                inputSelector: '#search_input_react'
+              });
+            </script></body></html>

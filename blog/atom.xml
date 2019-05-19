@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://hongarc.github.io/testing-library-docs/blog</id>
+    <title>Testing Library Blog</title>
+    <updated>2019-04-25T06:00:00Z</updated>
+    <generator>Feed for Node.js</generator>
+    <link rel="alternate" href="https://hongarc.github.io/testing-library-docs/blog"/>
+    <subtitle>The best place to stay up-to-date with the latest Testing Library news and events.</subtitle>
+    <logo>https://hongarc.github.io/testing-library-docs/img/octopus-64x64.png</logo>
+    <rights>Copyright © 2018-2019 Kent C. Dodds and contributors</rights>
+    <entry>
+        <title type="html"><![CDATA[Testing Library Updates: new release, github org, open collective, and twitter account]]></title>
+        <id>https://hongarc.github.io/testing-library-docs/blog/2019/04/25/new-org.html</id>
+        <link href="https://hongarc.github.io/testing-library-docs/blog/2019/04/25/new-org.html">
+        </link>
+        <updated>2019-04-25T06:00:00Z</updated>
+        <summary type="html"><![CDATA[<p>Hello friends! I'm pleased to announce the recent updates to the testing-library family of tools! As always, we're committed to giving you the best tools to enable you to have confidence in shipping your applications. That's why the guiding principle ...</p>]]></summary>
+        <author>
+            <name>Kent C. Dodds</name>
+            <uri>https://kentcdodds.com</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Multi-Framework Code Blocks]]></title>
+        <id>https://hongarc.github.io/testing-library-docs/blog/2019/03/17/code-blocks.html</id>
+        <link href="https://hongarc.github.io/testing-library-docs/blog/2019/03/17/code-blocks.html">
+        </link>
+        <updated>2019-03-17T06:00:00Z</updated>
+        <summary type="html"><![CDATA[<p>Many of the code samples have been updated to include tabs to switch between &quot;plain&quot; DOM Testing Library syntax and the wrappers for React, Cypress, etc.</p> <p>Thanks to <a href="https://github.com/tylerthehaas">@tylerthehaas</a> for pointing out that the previous examples could be confusing ...</p>]]></summary>
+        <author>
+            <name>Alex Krolick</name>
+            <uri>http://github.com/alexkrolick</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[New Site]]></title>
+        <id>https://hongarc.github.io/testing-library-docs/blog/2018/12/29/new-site.html</id>
+        <link href="https://hongarc.github.io/testing-library-docs/blog/2018/12/29/new-site.html">
+        </link>
+        <updated>2018-12-29T06:00:00Z</updated>
+        <summary type="html"><![CDATA[<p>We have a docs site now! It's built with <a href="https://docusaurus.io">Docusaurus</a>.</p> <p>The new site is the homepage for DOM Testing Library, React Testing Library, and the *-testing-library ecosystem. Check out the landing pages for each:</p> <ul> <li><a href="/">🐙 DOM Testing Library</a></li> <li><a href="/react">⚛️ React Testing Librar...</a></li></ul>]]></summary>
+        <author>
+            <name>Alex Krolick</name>
+            <uri>http://github.com/alexkrolick</uri>
+        </author>
+    </entry>
+</feed>

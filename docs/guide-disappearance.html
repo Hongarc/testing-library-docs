@@ -1,0 +1,150 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Appearance and Disappearance · Testing Library</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;Sometimes you need to test that an element is present and then disappears or&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Appearance and Disappearance · Testing Library"/><meta property="og:type" content="website"/><meta property="og:url" content="https://hongarc.github.io/testing-library-docs/"/><meta property="og:description" content="&lt;p&gt;Sometimes you need to test that an element is present and then disappears or&lt;/p&gt;
+"/><meta property="og:image" content="https://hongarc.github.io/testing-library-docs/img/octopus-128x128.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://hongarc.github.io/testing-library-docs/img/octopus-128x128.png"/><link rel="shortcut icon" href="/testing-library-docs/img/octopus-32x32.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://hongarc.github.io/testing-library-docs/blog/atom.xml" title="Testing Library Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://hongarc.github.io/testing-library-docs/blog/feed.xml" title="Testing Library Blog RSS Feed"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-137787095-1', 'auto');
+              ga('send', 'pageview');
+            </script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:500,700|Source+Code+Pro:500,700|Source+Sans+Pro:400,400i,700"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script type="text/javascript" src="/js/sidenav.js"></script><link rel="stylesheet" href="/testing-library-docs/css/prism.css"/><link rel="stylesheet" href="/testing-library-docs/css/main.css"/><script src="/testing-library-docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/testing-library-docs/"><img class="logo" src="/testing-library-docs/img/octopus-64x64.png" alt="Testing Library"/><h2 class="headerTitleWithLogo">Testing Library</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/testing-library-docs/docs/intro" target="_self">Docs</a></li><li class="siteNavGroupActive"><a href="/testing-library-docs/docs/recipes" target="_self">Recipes</a></li><li class=""><a href="/testing-library-docs/help" target="_self">Help</a></li><li class=""><a href="/testing-library-docs/blog/" target="_self">Blog</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Guides</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Guides</h3><ul class=""><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/recipes">Recipes</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/guide-which-query">Which query should I use?</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/testing-library-docs/docs/guide-disappearance">Appearance and Disappearance</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Examples</h3><ul class=""><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/example-codesandbox">Codesandbox Examples</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/example-input-event">Input Event</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/example-update-props">Update Props</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/example-react-context">React Context</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/example-react-intl">React Intl</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/example-react-redux">React Redux</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/example-react-router">React Router</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/example-reach-router">Reach Router</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/example-react-transition-group">React Transition Group</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/example-external">External Examples</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Help</h3><ul class=""><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/learning">Learning Material</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/contributing">Contributing</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/testing-library/testing-library-docs/blob/master/docs/guide-disappearance.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">Appearance and Disappearance</h1></header><article><div><span><p>Sometimes you need to test that an element is present and then disappears or
+vice versa.</p>
+<h2><a class="anchor" aria-hidden="true" id="waiting-for-appearance"></a><a href="#waiting-for-appearance" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Waiting for appearance</h2>
+<p>If you need to wait for an element to appear, the <a href="/testing-library-docs/docs/dom-testing-library/api-async">async wait
+utilities</a> allow you to wait for an assertion to be satisfied before
+proceeding. The wait utilities retry until the query passes or times out.</p>
+<pre><code class="hljs css language-jsx"><span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'movie title appears'</span><span class="token punctuation">,</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token comment">// element is initially not present...</span>
+
+  <span class="token comment">// wait for appearance</span>
+  <span class="token keyword">await</span> <span class="token function">wait</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token function">expect</span><span class="token punctuation">(</span><span class="token function">getByText</span><span class="token punctuation">(</span><span class="token string">'the lion king'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toBeInTheDocument</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+  <span class="token comment">// wait for appearance and return the element</span>
+  <span class="token keyword">const</span> movie <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">waitForElement</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token function">getByText</span><span class="token punctuation">(</span><span class="token string">'the lion king'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="waiting-for-disappearance"></a><a href="#waiting-for-disappearance" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Waiting for disappearance</h2>
+<p>The <code>waitForElementToBeRemoved</code> <a href="/testing-library-docs/docs/dom-testing-library/api-async">async helper</a> function uses a
+callback to query for the element on each DOM mutation and resolves to <code>true</code>
+when the element is removed.</p>
+<pre><code class="hljs css language-jsx"><span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'movie title no longer present in DOM'</span><span class="token punctuation">,</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token comment">// element is removed</span>
+  <span class="token keyword">await</span> <span class="token function">waitForElementToBeRemoved</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token function">queryByText</span><span class="token punctuation">(</span><span class="token string">'the mummy'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<p>Using
+<a href="https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver"><code>MutationObserver</code></a>
+is more efficient than polling the DOM at regular intervals with <code>wait</code>.</p>
+<p>The <code>wait</code> <a href="/testing-library-docs/docs/dom-testing-library/api-async">async helper</a> function retries until the wrapped function
+stops throwing an error. This can be used to assert that an element disappears
+from the page.</p>
+<pre><code class="hljs css language-jsx"><span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'movie title goes away'</span><span class="token punctuation">,</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token comment">// element is initially present...</span>
+  <span class="token comment">// note use of queryBy instead of getBy to return null</span>
+  <span class="token comment">// instead of throwing in the query itself</span>
+  <span class="token keyword">await</span> <span class="token function">wait</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token function">expect</span><span class="token punctuation">(</span><span class="token function">queryByText</span><span class="token punctuation">(</span><span class="token string">'i, robot'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span>not<span class="token punctuation">.</span><span class="token function">toBeInTheDocument</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="asserting-elements-are-not-present"></a><a href="#asserting-elements-are-not-present" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Asserting elements are not present</h2>
+<p>The standard <code>getBy</code> methods throw an error when they can't find an element, so
+if you want to make an assertion that an element is <em>not</em> present in the DOM,
+you can use <code>queryBy</code> APIs instead:</p>
+<pre><code class="hljs css language-javascript"><span class="token keyword">const</span> submitButton <span class="token operator">=</span> <span class="token function">queryByText</span><span class="token punctuation">(</span>container<span class="token punctuation">,</span> <span class="token string">'submit'</span><span class="token punctuation">)</span>
+<span class="token function">expect</span><span class="token punctuation">(</span>submitButton<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toBeNull</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// it doesn't exist</span>
+</code></pre>
+<p>The <code>queryAll</code> APIs version return an array of matching nodes. The length of the
+array can be useful for assertions after elements are added or removed from the
+DOM.</p>
+<pre><code class="hljs css language-javascript"><span class="token keyword">const</span> submitButtons <span class="token operator">=</span> <span class="token function">queryAllByText</span><span class="token punctuation">(</span>container<span class="token punctuation">,</span> <span class="token string">'submit'</span><span class="token punctuation">)</span>
+<span class="token function">expect</span><span class="token punctuation">(</span>submitButtons<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toHaveLength</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span> <span class="token comment">// expect 2 elements</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="nottobeinthedocument"></a><a href="#nottobeinthedocument" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>not.toBeInTheDocument</code></h3>
+<p>The <a href="/testing-library-docs/docs/ecosystem-jest-dom"><code>jest-dom</code></a> utility library provides the
+<code>.toBeInTheDocument()</code> matcher, which can be used to assert that an element is
+in the body of the document, or not. This can be more meaningful than asserting
+a query result is <code>null</code>.</p>
+<pre><code class="hljs css language-javascript"><span class="token keyword">import</span> <span class="token string">'jest-dom/extend-expect'</span>
+<span class="token comment">// use `queryBy` to avoid throwing an error with `getBy`</span>
+<span class="token keyword">const</span> submitButton <span class="token operator">=</span> <span class="token function">queryByText</span><span class="token punctuation">(</span>container<span class="token punctuation">,</span> <span class="token string">'submit'</span><span class="token punctuation">)</span>
+<span class="token function">expect</span><span class="token punctuation">(</span>submitButton<span class="token punctuation">)</span><span class="token punctuation">.</span>not<span class="token punctuation">.</span><span class="token function">toBeInTheDocument</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 5/6/2019</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/testing-library-docs/docs/guide-which-query"><span class="arrow-prev">← </span><span>Which query should I use?</span></a><a class="docs-next button" href="/testing-library-docs/docs/example-codesandbox"><span>Codesandbox Examples</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#waiting-for-appearance">Waiting for appearance</a></li><li><a href="#waiting-for-disappearance">Waiting for disappearance</a></li><li><a href="#asserting-elements-are-not-present">Asserting elements are not present</a><ul class="toc-headings"><li><a href="#nottobeinthedocument"><code>not.toBeInTheDocument</code></a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/testing-library-docs/" class="nav-home"><img src="/testing-library-docs/img/octopus-128x128.png" alt="Testing Library" width="66" height="58"/></a><div><h5>Docs</h5><a href="/testing-library-docs/docs/intro">Getting Started</a><a href="/testing-library-docs/docs/example-codesandbox">Examples</a><a href="/testing-library-docs/docs/dom-testing-library/api-queries">API</a><a href="/testing-library-docs/docs/dom-testing-library/faq">Help</a></div><div><h5>Community</h5><a href="/testing-library-docs/blog">Blog</a><a target="_blank" rel="noreferrer noopener" href="https://stackoverflow.com/questions/tagged/react-testing-library">Stack Overflow</a><a target="_blank" rel="noreferrer noopener" href="https://www.reactiflux.com/">Reactiflux on Discord</a><a target="_blank" rel="noreferrer noopener" href="https://spectrum.chat/testing-library">Spectrum</a></div><div><h5>More</h5><a target="_blank" rel="noreferrer noopener" class="github-button" href="https://github.com/testing-library/react-testing-library" data-icon="octicon-star" data-count-href="/testing-library/react-testing-library/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a><a target="_blank" rel="noreferrer noopener" href="https://github.com/testing-library">GitHub</a><a target="_blank" rel="noreferrer noopener" href="https://github.com/testing-library/testing-library-docs">Edit Docs on GitHub</a></div></section><section class="copyright">Copyright © 2018-2019 Kent C. Dodds and contributors</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: 'bda29e6557dc5be1ce5c05f2dbff8f33',
+                indexName: 'testing-library',
+                inputSelector: '#search_input_react'
+              });
+            </script></body></html>

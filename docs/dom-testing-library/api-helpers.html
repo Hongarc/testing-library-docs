@@ -1,0 +1,223 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Helpers · Testing Library</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;h2&gt;&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;custom-queries&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#custom-queries&quot; aria-hidden=&quot;true&quot; class=&quot;hash-link&quot;&gt;&lt;svg class=&quot;hash-link-icon&quot; aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Custom Queries&lt;/h2&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Helpers · Testing Library"/><meta property="og:type" content="website"/><meta property="og:url" content="https://hongarc.github.io/testing-library-docs/"/><meta property="og:description" content="&lt;h2&gt;&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;custom-queries&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#custom-queries&quot; aria-hidden=&quot;true&quot; class=&quot;hash-link&quot;&gt;&lt;svg class=&quot;hash-link-icon&quot; aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Custom Queries&lt;/h2&gt;
+"/><meta property="og:image" content="https://hongarc.github.io/testing-library-docs/img/octopus-128x128.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://hongarc.github.io/testing-library-docs/img/octopus-128x128.png"/><link rel="shortcut icon" href="/testing-library-docs/img/octopus-32x32.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://hongarc.github.io/testing-library-docs/blog/atom.xml" title="Testing Library Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://hongarc.github.io/testing-library-docs/blog/feed.xml" title="Testing Library Blog RSS Feed"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-137787095-1', 'auto');
+              ga('send', 'pageview');
+            </script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:500,700|Source+Code+Pro:500,700|Source+Sans+Pro:400,400i,700"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script type="text/javascript" src="/js/sidenav.js"></script><link rel="stylesheet" href="/testing-library-docs/css/prism.css"/><link rel="stylesheet" href="/testing-library-docs/css/main.css"/><script src="/testing-library-docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/testing-library-docs/"><img class="logo" src="/testing-library-docs/img/octopus-64x64.png" alt="Testing Library"/><h2 class="headerTitleWithLogo">Testing Library</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/testing-library-docs/docs/intro" target="_self">Docs</a></li><li class=""><a href="/testing-library-docs/docs/recipes" target="_self">Recipes</a></li><li class=""><a href="/testing-library-docs/help" target="_self">Help</a></li><li class=""><a href="/testing-library-docs/blog/" target="_self">Blog</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>DOM Testing Library</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Getting Started</h3><ul class=""><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/intro">Introduction</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/guiding-principles">Guiding Principles</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Frameworks</h3><ul class=""><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">DOM Testing Library</h4><ul><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/dom-testing-library/intro">Introduction</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/dom-testing-library/install">Install</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/dom-testing-library/example-intro">Example</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/dom-testing-library/setup">Setup</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/dom-testing-library/api-queries">Queries</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/dom-testing-library/api-events">Firing Events</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/dom-testing-library/api-async">Async Utilities</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/testing-library-docs/docs/dom-testing-library/api-helpers">Helpers</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/dom-testing-library/api-configuration">Configuration</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/dom-testing-library/faq">FAQ</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/dom-testing-library/cheatsheet">Cheatsheet</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">React Testing Library</h4><ul><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/react-testing-library/intro">Introduction</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/react-testing-library/example-intro">Example</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/react-testing-library/setup">Setup</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/react-testing-library/api">API</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/react-testing-library/faq">FAQ</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/react-testing-library/cheatsheet">Cheatsheet</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">ReasonReact Testing Library</h4><ul><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/bs-react-testing-library/intro">Introduction</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/bs-react-testing-library/examples">Examples</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Native Testing Library</h4><ul><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/native-testing-library/intro">Intro</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/native-testing-library/example-intro">Example</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/native-testing-library/setup">Setup</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/native-testing-library/api">API</a></li></ul></div><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/cypress-testing-library/intro">Cypress Testing Library</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/svelte-testing-library/intro">Svelte Testing Library</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/vue-testing-library/intro">Vue Testing Library</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/angular-testing-library/intro">Angular Testing Library</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/pptr-testing-library/intro">Puppeteer Testing Library</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/testcafe-testing-library/intro">Testcafe Testing Library</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Ecosystem</h3><ul class=""><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/ecosystem-user-event">user-event</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/ecosystem-jest-dom">jest-dom</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/ecosystem-bs-jest-dom">bs-jest-dom</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/ecosystem-jest-native">jest-native</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/testing-library/testing-library-docs/blob/master/docs/dom-testing-library/api-helpers.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">Helpers</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="custom-queries"></a><a href="#custom-queries" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Custom Queries</h2>
+<p><code>dom-testing-library</code> exposes many of the helper functions that are used to
+implement the default queries. You can use the helpers to build custom queries.
+For example, the code below shows a way to override the default <code>testId</code> queries
+to use a different data-attribute. (Note: test files would import
+<code>test-utils.js</code> instead of using <code>dom-testing-library</code> directly).</p>
+<pre><code class="hljs css language-js"><span class="token comment">// test-utils.js</span>
+<span class="token keyword">const</span> domTestingLib <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'dom-testing-library'</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> <span class="token punctuation">{</span> queryHelpers <span class="token punctuation">}</span> <span class="token operator">=</span> domTestingLib
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> queryByTestId <span class="token operator">=</span> queryHelpers<span class="token punctuation">.</span><span class="token function">queryByAttribute</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span>
+  <span class="token keyword">null</span><span class="token punctuation">,</span>
+  <span class="token string">'data-test-id'</span>
+<span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> queryAllByTestId <span class="token operator">=</span> queryHelpers<span class="token punctuation">.</span><span class="token function">queryAllByAttribute</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span>
+  <span class="token keyword">null</span><span class="token punctuation">,</span>
+  <span class="token string">'data-test-id'</span>
+<span class="token punctuation">)</span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">getAllByTestId</span><span class="token punctuation">(</span><span class="token parameter">container<span class="token punctuation">,</span> id<span class="token punctuation">,</span> <span class="token operator">...</span>rest</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> els <span class="token operator">=</span> <span class="token function">queryAllByTestId</span><span class="token punctuation">(</span>container<span class="token punctuation">,</span> id<span class="token punctuation">,</span> <span class="token operator">...</span>rest<span class="token punctuation">)</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>els<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">throw</span> queryHelpers<span class="token punctuation">.</span><span class="token function">getElementError</span><span class="token punctuation">(</span>
+      <span class="token template-string"><span class="token string">`Unable to find an element by: [data-test-id="</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>id<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">"]`</span></span><span class="token punctuation">,</span>
+      container
+    <span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> els
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">getByTestId</span><span class="token punctuation">(</span><span class="token parameter"><span class="token operator">...</span>args</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> queryHelpers<span class="token punctuation">.</span><span class="token function">firstResultOrNull</span><span class="token punctuation">(</span>getAllByTestId<span class="token punctuation">,</span> <span class="token operator">...</span>args<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// re-export with overrides</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token operator">...</span>domTestingLib<span class="token punctuation">,</span>
+  getByTestId<span class="token punctuation">,</span>
+  getAllByTestId<span class="token punctuation">,</span>
+  queryByTestId<span class="token punctuation">,</span>
+  queryAllByTestId<span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<blockquote>
+<p><strong>Note</strong></p>
+<p>Custom queries can be added to <code>react-testing-library</code>'s <code>render</code> method by
+adding <code>queries</code> to the options config object. See the render
+<a href="/docs/react-testing-library/api#render-options">options</a>.</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="using-other-assertion-libraries"></a><a href="#using-other-assertion-libraries" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using other assertion libraries</h3>
+<p>If you're not using jest, you may be able to find a similar set of custom
+assertions for your library of choice. Here's a list of alternatives to jest-dom
+for other popular assertion libraries:</p>
+<ul>
+<li><a href="https://github.com/nathanboktae/chai-dom">chai-dom</a></li>
+</ul>
+<p>If you're aware of some other alternatives, please [make a pull request][prs]
+and add it here!</p>
+<h2><a class="anchor" aria-hidden="true" id="getnodetext"></a><a href="#getnodetext" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>getNodeText</code></h2>
+<pre><code class="hljs css language-typescript"><span class="token function">getNodeText</span><span class="token punctuation">(</span>node<span class="token punctuation">:</span> HTMLElement<span class="token punctuation">)</span>
+</code></pre>
+<p>Returns the complete text content of a html element, removing any extra
+whitespace. The intention is to treat text in nodes exactly as how it is
+perceived by users in a browser, where any extra whitespace within words in the
+html code is not meaningful when the text is rendered.</p>
+<pre><code class="hljs css language-javascript"><span class="token comment">// &lt;div></span>
+<span class="token comment">//   Hello</span>
+<span class="token comment">//     World  !</span>
+<span class="token comment">// &lt;/div></span>
+<span class="token keyword">const</span> text <span class="token operator">=</span> <span class="token function">getNodeText</span><span class="token punctuation">(</span>container<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'div'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// "Hello World !"</span>
+</code></pre>
+<p>This function is also used internally when querying nodes by their text content.
+This enables functions like <code>getByText</code> and <code>queryByText</code> to work as expected,
+finding elements in the DOM similarly to how users would do.</p>
+<p>The function has a special behavior for some input elements:</p>
+<pre><code class="hljs css language-javascript"><span class="token comment">// &lt;input type="submit" value="Send data" /></span>
+<span class="token comment">// &lt;input type="button" value="Push me" /></span>
+<span class="token keyword">const</span> submitText <span class="token operator">=</span> <span class="token function">getNodeText</span><span class="token punctuation">(</span>container<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'input[type=submit]'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// "Send data"</span>
+<span class="token keyword">const</span> buttonText <span class="token operator">=</span> <span class="token function">getNodeText</span><span class="token punctuation">(</span>container<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'input[type=button]'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// "Push me"</span>
+
+These elements use the attribute <span class="token template-string"><span class="token string">`value`</span></span> and display its value to the user<span class="token punctuation">.</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="within-and-getqueriesforelement-apis"></a><a href="#within-and-getqueriesforelement-apis" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>within</code> and <code>getQueriesForElement</code> APIs</h2>
+<p><code>within</code> (an alias to <code>getQueriesForElement</code>) takes a DOM element and binds it
+to the raw query functions, allowing them to be used without specifying a
+container. It is the recommended approach for libraries built on this API and is
+in use in <code>react-testing-library</code> and <code>vue-testing-library</code>.</p>
+<p>Example: To get the text 'hello' only within a section called 'messages', you
+could do:</p>
+<div class="tabs"><div class="nav-tabs"><div id="tab-group-5-tab-6" class="nav-link active" data-group="group_5" data-tab="tab-group-5-content-6">Native</div><div id="tab-group-5-tab-7" class="nav-link" data-group="group_5" data-tab="tab-group-5-content-7">React</div><div id="tab-group-5-tab-8" class="nav-link" data-group="group_5" data-tab="tab-group-5-content-8">Cypress</div></div><div class="tab-content"><div id="tab-group-5-content-6" class="tab-pane active" data-group="group_5" tabindex="-1"><div><span><pre><code class="hljs css language-js"><span class="token keyword">import</span> <span class="token punctuation">{</span> within <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'dom-testing-library'</span><br /><br /><span class="token keyword">const</span> <span class="token punctuation">{</span> getByText <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">within</span><span class="token punctuation">(</span>document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'messages'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><br /><span class="token keyword">const</span> helloMessage <span class="token operator">=</span> <span class="token function">getByText</span><span class="token punctuation">(</span><span class="token string">'hello'</span><span class="token punctuation">)</span><br /></code></pre>
+</span></div></div><div id="tab-group-5-content-7" class="tab-pane" data-group="group_5" tabindex="-1"><div><span><pre><code class="hljs css language-js"><span class="token keyword">import</span> <span class="token punctuation">{</span> render<span class="token punctuation">,</span> within <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-testing-library'</span><br /><br /><span class="token keyword">const</span> <span class="token punctuation">{</span> getByLabelText <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">render</span><span class="token punctuation">(</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">MyComponent</span></span> <span class="token punctuation">/></span></span><span class="token punctuation">)</span><br /><span class="token keyword">const</span> signinModal <span class="token operator">=</span> <span class="token function">getByLabelText</span><span class="token punctuation">(</span><span class="token string">'Sign In'</span><span class="token punctuation">)</span><br /><span class="token function">within</span><span class="token punctuation">(</span>signinModal<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getByPlaceholderText</span><span class="token punctuation">(</span><span class="token string">'Username'</span><span class="token punctuation">)</span><br /></code></pre>
+</span></div></div><div id="tab-group-5-content-8" class="tab-pane" data-group="group_5" tabindex="-1"><div><span><pre><code class="hljs css language-js">cy<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'form'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">within</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span><br />  cy<span class="token punctuation">.</span><span class="token function">getByText</span><span class="token punctuation">(</span><span class="token string">'Button Text'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">should</span><span class="token punctuation">(</span><span class="token string">'be.disabled'</span><span class="token punctuation">)</span><br /><span class="token punctuation">}</span><span class="token punctuation">)</span><br /></code></pre>
+</span></div></div></div></div>
+<h2><a class="anchor" aria-hidden="true" id="debugging"></a><a href="#debugging" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Debugging</h2>
+<p>When you use any <code>get</code> calls in your test cases, the current state of the
+<code>container</code> (DOM) gets printed on the console. For example:</p>
+<pre><code class="hljs css language-javascript"><span class="token comment">// &lt;div>Hello world&lt;/div></span>
+<span class="token function">getByText</span><span class="token punctuation">(</span>container<span class="token punctuation">,</span> <span class="token string">'Goodbye world'</span><span class="token punctuation">)</span> <span class="token comment">// will fail by throwing error</span>
+</code></pre>
+<p>The above test case will fail, however it prints the state of your DOM under
+test, so you will get to see:</p>
+<pre><code class="hljs">Unable to find an element <span class="token keyword">with</span> the text<span class="token punctuation">:</span> Goodbye world<span class="token punctuation">.</span> This could be because the text is broken up by multiple elements<span class="token punctuation">.</span> In <span class="token keyword">this</span> <span class="token keyword">case</span><span class="token punctuation">,</span> you can provide a <span class="token keyword">function</span> <span class="token keyword">for</span> your text matcher to make your matcher more flexible<span class="token punctuation">.</span>
+Here is the state <span class="token keyword">of</span> your container<span class="token punctuation">:</span>
+<span class="token operator">&lt;</span>div<span class="token operator">></span>
+  <span class="token operator">&lt;</span>div<span class="token operator">></span>
+    Hello World<span class="token operator">!</span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+</code></pre>
+<p>Note: Since the DOM size can get really large, you can set the limit of DOM
+content to be printed via environment variable <code>DEBUG_PRINT_LIMIT</code>. The default
+value is <code>7000</code>. You will see <code>...</code> in the console, when the DOM content is
+stripped off, because of the length you have set or due to default size limit.
+Here's how you might increase this limit when running tests:</p>
+<pre><code class="hljs"><span class="token constant">DEBUG_PRINT_LIMIT</span><span class="token operator">=</span><span class="token number">10000</span> npm test
+</code></pre>
+<p>This works on macOS/linux, you'll need to do something else for windows. If
+you'd like a solution that works for both, see
+<a href="https://www.npmjs.com/package/cross-env"><code>cross-env</code></a></p>
+<h3><a class="anchor" aria-hidden="true" id="prettydom"></a><a href="#prettydom" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>prettyDOM</code></h3>
+<p>This helper function can be used to print out readable representation of the DOM
+tree of a node. This can be helpful for instance when debugging tests.</p>
+<p>It is defined as:</p>
+<pre><code class="hljs css language-typescript"><span class="token keyword">function</span> <span class="token function">prettyDOM</span><span class="token punctuation">(</span><span class="token parameter">node<span class="token punctuation">:</span> HTMLElement<span class="token punctuation">,</span> maxLength<span class="token operator">?</span><span class="token punctuation">:</span> <span class="token builtin">number</span></span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token builtin">string</span>
+</code></pre>
+<p>It receives the root node to print out, and an optional extra argument to limit
+the size of the resulting string, for cases when it becomes too large.</p>
+<p>This function is usually used alongside <code>console.log</code> to temporarily print out
+DOM trees during tests for debugging purposes:</p>
+<pre><code class="hljs css language-javascript"><span class="token keyword">const</span> div <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'div'</span><span class="token punctuation">)</span>
+div<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> <span class="token string">'&lt;div>&lt;h1>Hello World&lt;/h1>&lt;/div>'</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">prettyDOM</span><span class="token punctuation">(</span>div<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">// &lt;div></span>
+<span class="token comment">//   &lt;h1>Hello World&lt;/h1></span>
+<span class="token comment">// &lt;/div></span>
+</code></pre>
+<p>This function is what also powers
+<a href="#debugging">the automatic debugging output described above</a>.</p>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 3/18/2019</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/testing-library-docs/docs/dom-testing-library/api-async"><span class="arrow-prev">← </span><span>Async Utilities</span></a><a class="docs-next button" href="/testing-library-docs/docs/dom-testing-library/api-configuration"><span>Configuration</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#custom-queries">Custom Queries</a><ul class="toc-headings"><li><a href="#using-other-assertion-libraries">Using other assertion libraries</a></li></ul></li><li><a href="#getnodetext"><code>getNodeText</code></a></li><li><a href="#within-and-getqueriesforelement-apis"><code>within</code> and <code>getQueriesForElement</code> APIs</a></li><li><a href="#debugging">Debugging</a><ul class="toc-headings"><li><a href="#prettydom"><code>prettyDOM</code></a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/testing-library-docs/" class="nav-home"><img src="/testing-library-docs/img/octopus-128x128.png" alt="Testing Library" width="66" height="58"/></a><div><h5>Docs</h5><a href="/testing-library-docs/docs/intro">Getting Started</a><a href="/testing-library-docs/docs/example-codesandbox">Examples</a><a href="/testing-library-docs/docs/dom-testing-library/api-queries">API</a><a href="/testing-library-docs/docs/dom-testing-library/faq">Help</a></div><div><h5>Community</h5><a href="/testing-library-docs/blog">Blog</a><a target="_blank" rel="noreferrer noopener" href="https://stackoverflow.com/questions/tagged/react-testing-library">Stack Overflow</a><a target="_blank" rel="noreferrer noopener" href="https://www.reactiflux.com/">Reactiflux on Discord</a><a target="_blank" rel="noreferrer noopener" href="https://spectrum.chat/testing-library">Spectrum</a></div><div><h5>More</h5><a target="_blank" rel="noreferrer noopener" class="github-button" href="https://github.com/testing-library/react-testing-library" data-icon="octicon-star" data-count-href="/testing-library/react-testing-library/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a><a target="_blank" rel="noreferrer noopener" href="https://github.com/testing-library">GitHub</a><a target="_blank" rel="noreferrer noopener" href="https://github.com/testing-library/testing-library-docs">Edit Docs on GitHub</a></div></section><section class="copyright">Copyright © 2018-2019 Kent C. Dodds and contributors</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: 'bda29e6557dc5be1ce5c05f2dbff8f33',
+                indexName: 'testing-library',
+                inputSelector: '#search_input_react'
+              });
+            </script></body></html>

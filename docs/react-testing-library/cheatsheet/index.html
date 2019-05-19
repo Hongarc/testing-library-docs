@@ -1,0 +1,262 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Cheatsheet · Testing Library</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;&lt;strong&gt;[Get the printable cheat sheet][cheatsheet]&lt;/strong&gt;&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Cheatsheet · Testing Library"/><meta property="og:type" content="website"/><meta property="og:url" content="https://hongarc.github.io/testing-library-docs/"/><meta property="og:description" content="&lt;p&gt;&lt;strong&gt;[Get the printable cheat sheet][cheatsheet]&lt;/strong&gt;&lt;/p&gt;
+"/><meta property="og:image" content="https://hongarc.github.io/testing-library-docs/img/octopus-128x128.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://hongarc.github.io/testing-library-docs/img/octopus-128x128.png"/><link rel="shortcut icon" href="/testing-library-docs/img/octopus-32x32.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://hongarc.github.io/testing-library-docs/blog/atom.xml" title="Testing Library Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://hongarc.github.io/testing-library-docs/blog/feed.xml" title="Testing Library Blog RSS Feed"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-137787095-1', 'auto');
+              ga('send', 'pageview');
+            </script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:500,700|Source+Code+Pro:500,700|Source+Sans+Pro:400,400i,700"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script type="text/javascript" src="/js/sidenav.js"></script><link rel="stylesheet" href="/testing-library-docs/css/prism.css"/><link rel="stylesheet" href="/testing-library-docs/css/main.css"/><script src="/testing-library-docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/testing-library-docs/"><img class="logo" src="/testing-library-docs/img/octopus-64x64.png" alt="Testing Library"/><h2 class="headerTitleWithLogo">Testing Library</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/testing-library-docs/docs/intro" target="_self">Docs</a></li><li class=""><a href="/testing-library-docs/docs/recipes" target="_self">Recipes</a></li><li class=""><a href="/testing-library-docs/help" target="_self">Help</a></li><li class=""><a href="/testing-library-docs/blog/" target="_self">Blog</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>React Testing Library</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Getting Started</h3><ul class=""><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/intro">Introduction</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/guiding-principles">Guiding Principles</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Frameworks</h3><ul class=""><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">DOM Testing Library</h4><ul><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/dom-testing-library/intro">Introduction</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/dom-testing-library/install">Install</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/dom-testing-library/example-intro">Example</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/dom-testing-library/setup">Setup</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/dom-testing-library/api-queries">Queries</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/dom-testing-library/api-events">Firing Events</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/dom-testing-library/api-async">Async Utilities</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/dom-testing-library/api-helpers">Helpers</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/dom-testing-library/api-configuration">Configuration</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/dom-testing-library/faq">FAQ</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/dom-testing-library/cheatsheet">Cheatsheet</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">React Testing Library</h4><ul><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/react-testing-library/intro">Introduction</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/react-testing-library/example-intro">Example</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/react-testing-library/setup">Setup</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/react-testing-library/api">API</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/react-testing-library/faq">FAQ</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/testing-library-docs/docs/react-testing-library/cheatsheet">Cheatsheet</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">ReasonReact Testing Library</h4><ul><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/bs-react-testing-library/intro">Introduction</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/bs-react-testing-library/examples">Examples</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Native Testing Library</h4><ul><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/native-testing-library/intro">Intro</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/native-testing-library/example-intro">Example</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/native-testing-library/setup">Setup</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/native-testing-library/api">API</a></li></ul></div><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/cypress-testing-library/intro">Cypress Testing Library</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/svelte-testing-library/intro">Svelte Testing Library</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/vue-testing-library/intro">Vue Testing Library</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/angular-testing-library/intro">Angular Testing Library</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/pptr-testing-library/intro">Puppeteer Testing Library</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/testcafe-testing-library/intro">Testcafe Testing Library</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Ecosystem</h3><ul class=""><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/ecosystem-user-event">user-event</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/ecosystem-jest-dom">jest-dom</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/ecosystem-bs-jest-dom">bs-jest-dom</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/ecosystem-jest-native">jest-native</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/testing-library/testing-library-docs/blob/master/docs/react-testing-library/cheatsheet.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">Cheatsheet</h1></header><article><div><span><p><strong><a href="https://github.com/testing-library/react-testing-library/raw/master/other/cheat-sheet.pdf">Get the printable cheat sheet</a></strong></p>
+<p>A short guide to all the exported functions in <code>react-testing-library</code></p>
+<ul>
+<li><strong>render</strong> <code>const {/* */} = render(Component)</code> returns:
+<ul>
+<li>all the queries from <code>dom-testing-library</code>, bound to the document so there
+is no need to pass a node as the first argument</li>
+<li><code>unmount</code> function to unmount the component</li>
+<li><code>container</code> reference to the DOM node where the component is mounted</li>
+</ul></li>
+</ul>
+<pre><code class="hljs css language-jsx"><span class="token keyword">import</span> <span class="token punctuation">{</span> render<span class="token punctuation">,</span> fireEvent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-testing-library'</span>
+
+<span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'loads items eventually'</span><span class="token punctuation">,</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> getByText<span class="token punctuation">,</span> findByText <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">render</span><span class="token punctuation">(</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Page</span></span> <span class="token punctuation">/></span></span><span class="token punctuation">)</span>
+
+  <span class="token comment">// Click button</span>
+  fireEvent<span class="token punctuation">.</span><span class="token function">click</span><span class="token punctuation">(</span><span class="token function">getByText</span><span class="token punctuation">(</span><span class="token string">'Load'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+  <span class="token comment">// Wait for page to update with query text</span>
+  <span class="token keyword">const</span> items <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">findByText</span><span class="token punctuation">(</span><span class="token regex">/Item #[0-9]: /</span><span class="token punctuation">)</span>
+  <span class="token function">expect</span><span class="token punctuation">(</span>items<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toHaveLength</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="queries"></a><a href="#queries" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Queries</h2>
+<blockquote>
+<p><strong>Difference from dom-testing-library</strong></p>
+<p>The queries returned from <code>render</code> in <code>react-testing-library</code> are the same as
+<code>dom-testing-library</code> except they have the first argument bound to the
+document, so instead of <code>getByText(node, 'text')</code> you do <code>getByText('text')</code></p>
+</blockquote>
+<p>See <a href="/testing-library-docs/docs/guide-which-query">Which query should I use?</a></p>
+<table>
+<thead>
+<tr><th></th><th>No Match</th><th>1 Match</th><th>1+ Match</th><th>Await?</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>getBy</strong></td><td>throw</td><td>return</td><td>throw</td><td>No</td></tr>
+<tr><td><strong>findBy</strong></td><td>throw</td><td>return</td><td>throw</td><td>Yes</td></tr>
+<tr><td><strong>queryBy</strong></td><td>null</td><td>return</td><td>throw</td><td>No</td></tr>
+<tr><td><strong>getAllBy</strong></td><td>throw</td><td>array</td><td>array</td><td>No</td></tr>
+<tr><td><strong>findAllBy</strong></td><td>throw</td><td>array</td><td>array</td><td>Yes</td></tr>
+<tr><td><strong>queryAllBy</strong></td><td>[]</td><td>array</td><td>array</td><td>No</td></tr>
+</tbody>
+</table>
+<ul>
+<li><strong>ByLabelText</strong> find by label or aria-label text content
+<ul>
+<li>getByLabelText</li>
+<li>queryByLabelText</li>
+<li>getAllByLabelText</li>
+<li>queryAllByLabelText</li>
+<li>findByLabelText</li>
+<li>findAllByLabelText</li>
+</ul></li>
+<li><strong>ByPlaceholderText</strong> find by input placeholder value
+<ul>
+<li>getByPlaceholderText</li>
+<li>queryByPlaceholderText</li>
+<li>getAllByPlaceholderText</li>
+<li>queryAllByPlaceholderText</li>
+<li>findByPlaceholderText</li>
+<li>findAllByPlaceholderText</li>
+</ul></li>
+<li><strong>ByText</strong> find by element text content
+<ul>
+<li>getByText</li>
+<li>queryByText</li>
+<li>getAllByText</li>
+<li>queryAllByText</li>
+<li>findByText</li>
+<li>findAllByText</li>
+</ul></li>
+<li><strong>ByDisplayValue</strong> find by form element current value
+<ul>
+<li>getByDisplayValue</li>
+<li>queryByDisplayValue</li>
+<li>getAllByDisplayValue</li>
+<li>queryAllByDisplayValue</li>
+<li>findByDisplayValue</li>
+<li>findAllByDisplayValue</li>
+</ul></li>
+<li><strong>ByAltText</strong> find by img alt attribute
+<ul>
+<li>getByAltText</li>
+<li>queryByAltText</li>
+<li>getAllByAltText</li>
+<li>queryAllByAltText</li>
+<li>findByAltText</li>
+<li>findAllByAltText</li>
+</ul></li>
+<li><strong>ByTitle</strong> find by title attribute or svg title tag
+<ul>
+<li>getByTitle</li>
+<li>queryByTitle</li>
+<li>getAllByTitle</li>
+<li>queryAllByTitle</li>
+<li>findByTitle</li>
+<li>findAllByTitle</li>
+</ul></li>
+<li><strong>ByRole</strong> find by aria role
+<ul>
+<li>getByRole</li>
+<li>queryByRole</li>
+<li>getAllByRole</li>
+<li>queryAllByRole</li>
+<li>findByRole</li>
+<li>findAllByRole</li>
+</ul></li>
+<li><strong>ByTestId</strong> find by data-testid attribute
+<ul>
+<li>getByTestId</li>
+<li>queryByTestId</li>
+<li>getAllByTestId</li>
+<li>queryAllByTestId</li>
+<li>findByTestId</li>
+<li>findAllByTestId</li>
+</ul></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="async"></a><a href="#async" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Async</h2>
+<p>See <a href="/testing-library-docs/docs/dom-testing-library/api-async">dom-testing-library Async API</a></p>
+<ul>
+<li><strong>wait</strong> (Promise) retry function within until it stops throwing or times out</li>
+<li><strong>waitForElement</strong> (Promise) retry function or array of functions and return
+the result</li>
+<li><code>findBy</code> and <code>findAllBy</code> queries are async and retry until either a timeout or
+if the query returns successfully; they wrap <code>waitForElement</code>.</li>
+</ul>
+<blockquote>
+<p>Remember to <code>await</code> or <code>.then()</code> the result of async functions in your tests!</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="events"></a><a href="#events" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events</h2>
+<p>See <a href="/testing-library-docs/docs/dom-testing-library/api-events">Events API</a></p>
+<ul>
+<li><strong>fireEvent</strong> trigger DOM event: <code>fireEvent(node, event)</code></li>
+<li><strong>fireEvent.*</strong> helpers for default event types
+<ul>
+<li><strong>click</strong> <code>fireEvent.click(node)</code></li>
+<li><a href="https://github.com/testing-library/dom-testing-library/blob/master/src/events.js">See all supported events</a></li>
+</ul></li>
+<li><strong>act</strong> wrapper around
+<a href="https://reactjs.org/docs/test-utils.html#act">react-dom/test-utils act</a>;
+react-testing-library wraps render and fireEvent in a call to <code>act</code> already so
+most cases should not require using it manually</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="other"></a><a href="#other" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Other</h2>
+<p>See <a href="/testing-library-docs/docs/dom-testing-library/api-helpers">Helpers API</a>,
+<a href="/testing-library-docs/docs/dom-testing-library/api-configuration">Config API</a></p>
+<ul>
+<li><strong>within</strong> take a node and return an object with all the queries bound to the
+node (used to return the queries from <code>react-testing-library</code>'s render
+method): <code>within(node).getByText(&quot;hello&quot;)</code></li>
+<li><strong>configure</strong> change global options:
+<code>configure({testIdAttribute: 'my-data-test-id'})</code></li>
+<li><strong>cleanup</strong> clears the DOM (<a href="/testing-library-docs/docs/react-testing-library/setup#cleanup">use with <code>afterEach</code></a> to reset
+DOM between tests)</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="text-match-options"></a><a href="#text-match-options" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Text Match Options</h2>
+<p>Given the following HTML:</p>
+<pre><code class="hljs css language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>Hello World<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+</code></pre>
+<p><strong><em>Will</em> find the div:</strong></p>
+<pre><code class="hljs css language-javascript"><span class="token comment">// Matching a string:</span>
+<span class="token function">getByText</span><span class="token punctuation">(</span>container<span class="token punctuation">,</span> <span class="token string">'Hello World'</span><span class="token punctuation">)</span> <span class="token comment">// full string match</span>
+<span class="token function">getByText</span><span class="token punctuation">(</span>container<span class="token punctuation">,</span> <span class="token string">'llo Worl'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> exact<span class="token punctuation">:</span> <span class="token boolean">false</span> <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token comment">// substring match</span>
+<span class="token function">getByText</span><span class="token punctuation">(</span>container<span class="token punctuation">,</span> <span class="token string">'hello world'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> exact<span class="token punctuation">:</span> <span class="token boolean">false</span> <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token comment">// ignore case</span>
+
+<span class="token comment">// Matching a regex:</span>
+<span class="token function">getByText</span><span class="token punctuation">(</span>container<span class="token punctuation">,</span> <span class="token regex">/World/</span><span class="token punctuation">)</span> <span class="token comment">// substring match</span>
+<span class="token function">getByText</span><span class="token punctuation">(</span>container<span class="token punctuation">,</span> <span class="token regex">/world/i</span><span class="token punctuation">)</span> <span class="token comment">// substring match, ignore case</span>
+<span class="token function">getByText</span><span class="token punctuation">(</span>container<span class="token punctuation">,</span> <span class="token regex">/^hello world$/i</span><span class="token punctuation">)</span> <span class="token comment">// full string match, ignore case</span>
+<span class="token function">getByText</span><span class="token punctuation">(</span>container<span class="token punctuation">,</span> <span class="token regex">/Hello W?oRlD/i</span><span class="token punctuation">)</span> <span class="token comment">// advanced regex</span>
+
+<span class="token comment">// Matching with a custom function:</span>
+<span class="token function">getByText</span><span class="token punctuation">(</span>container<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">content<span class="token punctuation">,</span> element</span><span class="token punctuation">)</span> <span class="token operator">=></span> content<span class="token punctuation">.</span><span class="token function">startsWith</span><span class="token punctuation">(</span><span class="token string">'Hello'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<p><strong><a href="https://github.com/testing-library/react-testing-library/raw/master/other/cheat-sheet.pdf">Get the printable cheat sheet</a></strong></p>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 5/3/2019</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/testing-library-docs/docs/react-testing-library/faq"><span class="arrow-prev">← </span><span>FAQ</span></a><a class="docs-next button" href="/testing-library-docs/docs/bs-react-testing-library/intro"><span>Introduction</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#queries">Queries</a></li><li><a href="#async">Async</a></li><li><a href="#events">Events</a></li><li><a href="#other">Other</a></li><li><a href="#text-match-options">Text Match Options</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/testing-library-docs/" class="nav-home"><img src="/testing-library-docs/img/octopus-128x128.png" alt="Testing Library" width="66" height="58"/></a><div><h5>Docs</h5><a href="/testing-library-docs/docs/intro">Getting Started</a><a href="/testing-library-docs/docs/example-codesandbox">Examples</a><a href="/testing-library-docs/docs/dom-testing-library/api-queries">API</a><a href="/testing-library-docs/docs/dom-testing-library/faq">Help</a></div><div><h5>Community</h5><a href="/testing-library-docs/blog">Blog</a><a target="_blank" rel="noreferrer noopener" href="https://stackoverflow.com/questions/tagged/react-testing-library">Stack Overflow</a><a target="_blank" rel="noreferrer noopener" href="https://www.reactiflux.com/">Reactiflux on Discord</a><a target="_blank" rel="noreferrer noopener" href="https://spectrum.chat/testing-library">Spectrum</a></div><div><h5>More</h5><a target="_blank" rel="noreferrer noopener" class="github-button" href="https://github.com/testing-library/react-testing-library" data-icon="octicon-star" data-count-href="/testing-library/react-testing-library/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a><a target="_blank" rel="noreferrer noopener" href="https://github.com/testing-library">GitHub</a><a target="_blank" rel="noreferrer noopener" href="https://github.com/testing-library/testing-library-docs">Edit Docs on GitHub</a></div></section><section class="copyright">Copyright © 2018-2019 Kent C. Dodds and contributors</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: 'bda29e6557dc5be1ce5c05f2dbff8f33',
+                indexName: 'testing-library',
+                inputSelector: '#search_input_react'
+              });
+            </script></body></html>

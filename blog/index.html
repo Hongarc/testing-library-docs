@@ -1,0 +1,264 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Blog · Testing Library</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Simple and complete testing utilities that encourage good testing practices"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Blog · Testing Library"/><meta property="og:type" content="website"/><meta property="og:url" content="https://hongarc.github.io/testing-library-docs/"/><meta property="og:description" content="Simple and complete testing utilities that encourage good testing practices"/><meta property="og:image" content="https://hongarc.github.io/testing-library-docs/img/octopus-128x128.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://hongarc.github.io/testing-library-docs/img/octopus-128x128.png"/><link rel="shortcut icon" href="/testing-library-docs/img/octopus-32x32.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://hongarc.github.io/testing-library-docs/blog/atom.xml" title="Testing Library Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://hongarc.github.io/testing-library-docs/blog/feed.xml" title="Testing Library Blog RSS Feed"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-137787095-1', 'auto');
+              ga('send', 'pageview');
+            </script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:500,700|Source+Code+Pro:500,700|Source+Sans+Pro:400,400i,700"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script type="text/javascript" src="/js/sidenav.js"></script><link rel="stylesheet" href="/testing-library-docs/css/prism.css"/><link rel="stylesheet" href="/testing-library-docs/css/main.css"/><script src="/testing-library-docs/js/codetabs.js"></script></head><body class="blog"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/testing-library-docs/"><img class="logo" src="/testing-library-docs/img/octopus-64x64.png" alt="Testing Library"/><h2 class="headerTitleWithLogo">Testing Library</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/testing-library-docs/docs/intro" target="_self">Docs</a></li><li class=""><a href="/testing-library-docs/docs/recipes" target="_self">Recipes</a></li><li class=""><a href="/testing-library-docs/help" target="_self">Help</a></li><li class="siteNavGroupActive siteNavItemActive"><a href="/testing-library-docs/blog/" target="_self">Blog</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Recent Posts</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Recent Posts</h3><ul class=""><li class="navListItem"><a class="navItem" href="/testing-library-docs/blog/2019/04/25/new-org">Testing Library Updates: new release, github org, open collective, and twitter account</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/blog/2019/03/17/code-blocks">Multi-Framework Code Blocks</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/blog/2018/12/29/new-site">New Site</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer postContainer blogContainer"><div class="wrapper"><div class="posts"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle"><a href="/testing-library-docs/blog/2019/04/25/new-org">Testing Library Updates: new release, github org, open collective, and twitter account</a></h1><p class="post-meta">April 25, 2019</p><div class="authorBlock"><p class="post-authorName"><a href="https://kentcdodds.com" target="_blank" rel="noreferrer noopener">Kent C. Dodds</a></p><div class="authorPhoto"><a href="https://kentcdodds.com" target="_blank" rel="noreferrer noopener"><img src="https://avatars0.githubusercontent.com/u/1500684?s=120&amp;v=4" alt="Kent C. Dodds"/></a></div></div></header><article class="post-content"><div><span><p>Hello friends! I'm pleased to announce the recent updates to the testing-library
+family of tools! As always, we're committed to giving you the best tools to
+enable you to have confidence in shipping your applications. That's why the
+guiding principle for everything we do is:</p>
+<blockquote>
+<p><a href="https://twitter.com/kentcdodds/status/977018512689455106">The more your tests resemble the way your software is used, the more confidence they can give you.</a></p>
+</blockquote>
+<p>This guiding principle has given us direction and we've been able to accomplish
+a lot in the testing space. To further our mission, I'd like to make a few
+announcements about changes going on in the testing-library world.</p>
+<h2><a class="anchor" aria-hidden="true" id="dom-testing-library-https-githubcom-testing-library-dom-testing-library-v4-released"></a><a href="#dom-testing-library-https-githubcom-testing-library-dom-testing-library-v4-released" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a href="https://github.com/testing-library/dom-testing-library">dom-testing-library</a> v4 released!</h2>
+<p>This is actually a pretty small release, but I think it's worth mentioning
+anyway. We try to keep breaking changes to a minimum. This release only has two
+breaking changes. One is removal of deprecated methods you probably weren't
+using anyway, and the other reveals potential bugs in your tests. So you should
+be able to upgrade to this version with little-to-no effort.</p>
+<p>If you do experience breakages, it's probably due to something like this:</p>
+<!-- prettier in my editor treats this like MDX, which turns this into a
+self-closing tag. But the parser docusaurus uses doesn't like that so we'll
+just disable it here -->
+<!-- prettier-ignore -->
+<iframe
+  src="https://codesandbox.io/embed/9zw1wv59mw?fontsize=14&module=%2Fsrc%2F__tests__%2Findex.js&previewwindow=tests&view=editor"
+  title="React Codesandbox"
+  style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+  sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
+></iframe>
+<p>We hope that this helps you catch bugs better!</p>
+<p><a href="https://github.com/testing-library/react-testing-library">react-testing-library</a>
+and
+<a href="https://github.com/testing-library/cypress-testing-library">cypress-testing-library</a>
+have already been updated and released major version bumps of their own to
+account for this upgrade. Other wrappers will hopefully follow shortly based on
+their respective matinainers' schedules.</p>
+<blockquote>
+<p><a href="https://github.com/testing-library/dom-testing-library/releases/tag/v4.0.0">View the Changelog</a></p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="testing-library-on-github-https-githubcom-testing-library"></a><a href="#testing-library-on-github-https-githubcom-testing-library" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a href="https://github.com/testing-library">Testing Library on GitHub</a></h2>
+<p>We've created a new org on GitHub to manage the family of testing library
+projects. The best part of the &quot;Testing Library&quot; isn't the code, but the
+philosophy behind it. So we're using the organization as a way to group all the
+projects that share the same philosophy and general utilities so whether you're
+using Vue, Cypress, or React (Native), you'll have a super testing tool that
+you're familiar with.</p>
+<p>Here are the current (or soon to be) members of the org:</p>
+<ul>
+<li><a href="https://github.com/testing-library/dom-testing-library">dom-testing-library</a></li>
+<li><a href="https://github.com/testing-library/react-testing-library">react-testing-library</a></li>
+<li><a href="https://github.com/testing-library/cypress-testing-library">cypress-testing-library</a></li>
+<li><a href="https://github.com/dfcook/vue-testing-library">vue-testing-library</a></li>
+<li><a href="https://github.com/testing-library/native-testing-library">native-testing-library</a>
+(React Native)</li>
+<li><a href="https://github.com/patrickhulce/pptr-testing-library">pptr-testing-library</a>
+(Puppeteer)</li>
+<li><a href="https://github.com/wyze/bs-react-testing-library">bs-react-testing-library</a>
+(ReasonReact)</li>
+<li><a href="https://github.com/benmonro/testcafe-testing-library">testcafe-testing-library</a></li>
+<li><a href="https://github.com/Gpx/user-event">user-event</a></li>
+<li><a href="https://github.com/testing-library/jest-dom">jest-dom</a></li>
+<li><a href="https://github.com/testing-library/jest-native">jest-native</a></li>
+</ul>
+<p>(Hopefully we'll have
+<a href="https://github.com/angular-extensions/testing-library/issues/4">angular on there eventually</a>
+<a href="https://github.com/emberjs/rfcs/pull/327">as well as ember</a>).</p>
+<p>What's cool is that building wrappers for your JavaScript framework of choice is
+often quite simple (as I demonstrate on
+<a href="https://testingjavascript.com">TestingJavaScript.com</a>). And as mentioned below,
+you can carry these same principles to non-DOM platforms as well!</p>
+<blockquote>
+<p><a href="https://github.com/testing-library">Checkout the Org and Star our Repos</a></p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="testing-library-on-open-collective-https-opencollectivecom-testing-library"></a><a href="#testing-library-on-open-collective-https-opencollectivecom-testing-library" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a href="https://opencollective.com/testing-library">Testing Library on Open Collective</a></h2>
+<p>If the Testing Library family of tools has provided you any value at all, we'd
+encourage you (or your employer) to contribute to our new
+<a href="https://opencollective.com/testing-library">Open Collective</a>.</p>
+<p>It is intended that funds raised by this open collective be used to:</p>
+<ul>
+<li>Donate to charities and other good causes</li>
+<li>Purchase testing-library related merchandise (stickers, T-Shirts, etc).</li>
+<li>Pay for hosting/domains/etc.</li>
+</ul>
+<p>There are currently no plans to pay people who work on the project, but we
+reserve the right to do so if it makes sense in the future.</p>
+<blockquote>
+<p><a href="https://opencollective.com/testing-library">Contribute to our open collective</a></p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="testing-library-on-twitter-https-twittercom-testinglib"></a><a href="#testing-library-on-twitter-https-twittercom-testinglib" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a href="https://twitter.com/testinglib">Testing Library on Twitter</a></h2>
+<p>A lot of chatter is going on in the Testing Library world on Twitter, so we've
+created a twitter account you can follow and keep up with what's going on.</p>
+<blockquote>
+<p><a href="https://twitter.com/testinglib">Follow @TestingLib</a></p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="testing-library-on-spectrum-https-spectrumchat-testing-library"></a><a href="#testing-library-on-spectrum-https-spectrumchat-testing-library" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a href="https://spectrum.chat/testing-library">Testing Library on Spectrum</a></h2>
+<p>We've had a pretty active spectrum community for react-testing-library. We're in
+the process of moving that to a more general Testing Library spectrum so we can
+have all discussion around the different wrappers in one place. There are over
+600 members of our spectrum community (special shout-out to
+<a href="https://spectrum.chat/users/gpx">Giorgio</a> who has been SUPER helpful to people
+there.) Please join us!</p>
+<blockquote>
+<p><a href="https://spectrum.chat/testing-library">Join us on Spectrum</a></p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="testing-library-on-react-native-https-wwwnative-testing-librarycom"></a><a href="#testing-library-on-react-native-https-wwwnative-testing-librarycom" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a href="https://www.native-testing-library.com/">Testing Library on React Native</a></h2>
+<p>I'm really happy to announce a super solution to the React Native testing space.
+The DOM is quite different from native, as I mentioned before, it's not the code
+but the concepts that really make the Testing Library great. I'm happy to say
+that <a href="https://twitter.com/bcarroll22">Brandon Carroll</a> has successfully ported
+those concepts to a solution for React Native and I'm really happy with it. Give
+it a look if you're building React Native applications and want confidence that
+they continue to work as you make changes!</p>
+<p>(Note, there is already <code>react-native-testing-library</code>, but it doesn't quite
+follow the guiding principles of Testing Library, so we recommend you use
+<code>native-testing-library</code>.
+<a href="https://medium.com/@brandoncarroll/why-native-testing-library-exists-629ffb85cae2">Learn More</a>).</p>
+<blockquote>
+<p><a href="https://www.native-testing-library.com/">Checkout native-testing-library</a></p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="learn-testing-library-https-testing-librarycom-docs-learning"></a><a href="#learn-testing-library-https-testing-librarycom-docs-learning" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a href="https://testing-library.com/docs/learning">Learn Testing Library</a></h2>
+<p>There's been a LOT of activity around the Testing Library principles and tools
+in the content space. We do have
+<a href="https://testing-library.com/docs/learning">a page that lists learning materials</a>,
+and more gets added to it daily. If you know of blog posts, YouTube videos,
+courses, or anything else about the Testing Library family of tools, please
+contribute to the list!</p>
+<blockquote>
+<p><a href="https://github.com/testing-library/testing-library-docs/edit/master/docs/learning.md">Contribute to the learning materials page</a></p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="other-exciting-news"></a><a href="#other-exciting-news" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Other Exciting news</h2>
+<p>As of a few months ago,
+<a href="https://reactjs.org/blog/2019/02/06/react-v16.8.0.html">the React team officially recommends</a>
+you use react-testing-library to test your react applications. That's kinda neat
+:)</p>
+<p>At the React Amsterdam <a href="https://osawards.com/react/">Open Source awards</a> ceremony,
+react-testing-library won the award for the Most impactful contribution to the
+community!</p>
+<p><img src="/img/blog/award.jpg" alt="Open Source Awards award"></p>
+<p>react-testing-library <em>also</em> received recognition on the
+<a href="https://www.thoughtworks.com/radar/languages-and-frameworks">ThoughtWorks Technology Radar</a>
+as technology they believe is &quot;Worth exploring with the goal of understanding
+how it will affect your enterprise.&quot; We think so too :)</p>
+<h2><a class="anchor" aria-hidden="true" id="special-thank-you"></a><a href="#special-thank-you" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Special Thank You</h2>
+<p>Each of the projects has had many contributors and on most projects in
+<a href="https://github.com/testing-library">the org</a>, you'll find a table of
+contributors. We're super grateful for all the contributions people have made to
+the projects. I'd like to also give a special shout-out to people who have made
+an especially significant impact on the Testing Library family of tools and
+community.</p>
+<p><a href="https://kentcdodds.com">Myself 👋</a>, <a href="https://alexkrolick.com/">Alex Krolick</a>,
+<a href="https://twitter.com/bcarroll22">Brandon Carroll</a>,
+<a href="https://twitter.com/Gpx">Giorgio</a>,
+<a href="https://twitter.com/gnapse">Ernesto García</a>, and
+<a href="https://github.com/dfcook">Daniel Cook</a>.</p>
+<p>As I said, there have been many who have contributed a great deal to the
+community, but these people stand out to me as individuals who have done
+especially great work. Thank you!</p>
+<h2><a class="anchor" aria-hidden="true" id="conclusion"></a><a href="#conclusion" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Conclusion</h2>
+<p>No matter what platform you're working with, the guiding principles of the
+Testing Library family can be applied to the tests for that platform. Take a
+step back and consider how closely your tests are resembling the way your
+software is used. If you can, consider what lightweight but powerful utilities
+would enable others to test their software in that way as well and create a
+library for that! Maybe it can join the Testing Library family of tools!</p>
+</span></div></article></div><div class="post"><header class="postHeader"><h1 class="postHeaderTitle"><a href="/testing-library-docs/blog/2019/03/17/code-blocks">Multi-Framework Code Blocks</a></h1><p class="post-meta">March 17, 2019</p><div class="authorBlock"><p class="post-authorName"><a href="http://github.com/alexkrolick" target="_blank" rel="noreferrer noopener">Alex Krolick</a></p></div></header><article class="post-content"><div><span><p>Many of the code samples have been updated to include tabs to switch between
+&quot;plain&quot; DOM Testing Library syntax and the wrappers for React, Cypress, etc.</p>
+<p>Thanks to <a href="https://github.com/tylerthehaas">@tylerthehaas</a> for pointing out that
+the previous examples could be confusing if you were targeting a specific
+library, and to the Docusaurus team for adding support for code tabs in version
+<a href="https://github.com/facebook/Docusaurus/blob/master/CHANGELOG.md#170---2019-1-23">1.7.2</a>.</p>
+</span></div></article></div><div class="post"><header class="postHeader"><h1 class="postHeaderTitle"><a href="/testing-library-docs/blog/2018/12/29/new-site">New Site</a></h1><p class="post-meta">December 29, 2018</p><div class="authorBlock"><p class="post-authorName"><a href="http://github.com/alexkrolick" target="_blank" rel="noreferrer noopener">Alex Krolick</a></p></div></header><article class="post-content"><div><span><p>We have a docs site now! It's built with <a href="https://docusaurus.io">Docusaurus</a>.</p>
+<p>The new site is the homepage for DOM Testing Library, React Testing Library, and
+the *-testing-library ecosystem. Check out the landing pages for each:</p>
+<ul>
+<li><a href="/">🐙 DOM Testing Library</a></li>
+<li><a href="/react">⚛️ React Testing Library</a></li>
+<li><a href="/cypress">🌲 Cypress Testing Library</a></li>
+</ul>
+<p>💯 Thank you to everyone who has contributed to the docs over the past months -
+the content has been ported over and the hope is that this site will provide a
+centralized place for examples, API reference, and community links in 2019 and
+beyond!</p>
+<p>🎉 Happy new year!</p>
+</span></div></article></div><div class="docs-prevnext"></div></div></div></div></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/testing-library-docs/" class="nav-home"><img src="/testing-library-docs/img/octopus-128x128.png" alt="Testing Library" width="66" height="58"/></a><div><h5>Docs</h5><a href="/testing-library-docs/docs/intro">Getting Started</a><a href="/testing-library-docs/docs/example-codesandbox">Examples</a><a href="/testing-library-docs/docs/dom-testing-library/api-queries">API</a><a href="/testing-library-docs/docs/dom-testing-library/faq">Help</a></div><div><h5>Community</h5><a href="/testing-library-docs/blog">Blog</a><a target="_blank" rel="noreferrer noopener" href="https://stackoverflow.com/questions/tagged/react-testing-library">Stack Overflow</a><a target="_blank" rel="noreferrer noopener" href="https://www.reactiflux.com/">Reactiflux on Discord</a><a target="_blank" rel="noreferrer noopener" href="https://spectrum.chat/testing-library">Spectrum</a></div><div><h5>More</h5><a target="_blank" rel="noreferrer noopener" class="github-button" href="https://github.com/testing-library/react-testing-library" data-icon="octicon-star" data-count-href="/testing-library/react-testing-library/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a><a target="_blank" rel="noreferrer noopener" href="https://github.com/testing-library">GitHub</a><a target="_blank" rel="noreferrer noopener" href="https://github.com/testing-library/testing-library-docs">Edit Docs on GitHub</a></div></section><section class="copyright">Copyright © 2018-2019 Kent C. Dodds and contributors</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: 'bda29e6557dc5be1ce5c05f2dbff8f33',
+                indexName: 'testing-library',
+                inputSelector: '#search_input_react'
+              });
+            </script></body></html>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Testing Library Blog</title>
+        <link>https://hongarc.github.io/testing-library-docs/blog</link>
+        <description>The best place to stay up-to-date with the latest Testing Library news and events.</description>
+        <lastBuildDate>Thu, 25 Apr 2019 06:00:00 GMT</lastBuildDate>
+        <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+        <generator>Feed for Node.js</generator>
+        <image>
+            <title>Testing Library Blog</title>
+            <url>https://hongarc.github.io/testing-library-docs/img/octopus-64x64.png</url>
+            <link>https://hongarc.github.io/testing-library-docs/blog</link>
+        </image>
+        <copyright>Copyright © 2018-2019 Kent C. Dodds and contributors</copyright>
+        <item>
+            <title><![CDATA[Testing Library Updates: new release, github org, open collective, and twitter account]]></title>
+            <link>https://hongarc.github.io/testing-library-docs/blog/2019/04/25/new-org.html</link>
+            <guid>https://hongarc.github.io/testing-library-docs/blog/2019/04/25/new-org.html</guid>
+            <pubDate>Thu, 25 Apr 2019 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Hello friends! I'm pleased to announce the recent updates to the testing-library family of tools! As always, we're committed to giving you the best tools to enable you to have confidence in shipping your applications. That's why the guiding principle ...</p>]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Multi-Framework Code Blocks]]></title>
+            <link>https://hongarc.github.io/testing-library-docs/blog/2019/03/17/code-blocks.html</link>
+            <guid>https://hongarc.github.io/testing-library-docs/blog/2019/03/17/code-blocks.html</guid>
+            <pubDate>Sun, 17 Mar 2019 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Many of the code samples have been updated to include tabs to switch between &quot;plain&quot; DOM Testing Library syntax and the wrappers for React, Cypress, etc.</p> <p>Thanks to <a href="https://github.com/tylerthehaas">@tylerthehaas</a> for pointing out that the previous examples could be confusing ...</p>]]></description>
+        </item>
+        <item>
+            <title><![CDATA[New Site]]></title>
+            <link>https://hongarc.github.io/testing-library-docs/blog/2018/12/29/new-site.html</link>
+            <guid>https://hongarc.github.io/testing-library-docs/blog/2018/12/29/new-site.html</guid>
+            <pubDate>Sat, 29 Dec 2018 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>We have a docs site now! It's built with <a href="https://docusaurus.io">Docusaurus</a>.</p> <p>The new site is the homepage for DOM Testing Library, React Testing Library, and the *-testing-library ecosystem. Check out the landing pages for each:</p> <ul> <li><a href="/">🐙 DOM Testing Library</a></li> <li><a href="/react">⚛️ React Testing Librar...</a></li></ul>]]></description>
+        </item>
+    </channel>
+</rss>

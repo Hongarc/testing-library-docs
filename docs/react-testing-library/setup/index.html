@@ -1,0 +1,256 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Setup · Testing Library</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;&lt;code&gt;react-testing-library&lt;/code&gt; does not require any configuration to be used (as&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Setup · Testing Library"/><meta property="og:type" content="website"/><meta property="og:url" content="https://hongarc.github.io/testing-library-docs/"/><meta property="og:description" content="&lt;p&gt;&lt;code&gt;react-testing-library&lt;/code&gt; does not require any configuration to be used (as&lt;/p&gt;
+"/><meta property="og:image" content="https://hongarc.github.io/testing-library-docs/img/octopus-128x128.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://hongarc.github.io/testing-library-docs/img/octopus-128x128.png"/><link rel="shortcut icon" href="/testing-library-docs/img/octopus-32x32.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://hongarc.github.io/testing-library-docs/blog/atom.xml" title="Testing Library Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://hongarc.github.io/testing-library-docs/blog/feed.xml" title="Testing Library Blog RSS Feed"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-137787095-1', 'auto');
+              ga('send', 'pageview');
+            </script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:500,700|Source+Code+Pro:500,700|Source+Sans+Pro:400,400i,700"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script type="text/javascript" src="/js/sidenav.js"></script><link rel="stylesheet" href="/testing-library-docs/css/prism.css"/><link rel="stylesheet" href="/testing-library-docs/css/main.css"/><script src="/testing-library-docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/testing-library-docs/"><img class="logo" src="/testing-library-docs/img/octopus-64x64.png" alt="Testing Library"/><h2 class="headerTitleWithLogo">Testing Library</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/testing-library-docs/docs/intro" target="_self">Docs</a></li><li class=""><a href="/testing-library-docs/docs/recipes" target="_self">Recipes</a></li><li class=""><a href="/testing-library-docs/help" target="_self">Help</a></li><li class=""><a href="/testing-library-docs/blog/" target="_self">Blog</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>React Testing Library</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Getting Started</h3><ul class=""><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/intro">Introduction</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/guiding-principles">Guiding Principles</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Frameworks</h3><ul class=""><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">DOM Testing Library</h4><ul><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/dom-testing-library/intro">Introduction</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/dom-testing-library/install">Install</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/dom-testing-library/example-intro">Example</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/dom-testing-library/setup">Setup</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/dom-testing-library/api-queries">Queries</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/dom-testing-library/api-events">Firing Events</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/dom-testing-library/api-async">Async Utilities</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/dom-testing-library/api-helpers">Helpers</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/dom-testing-library/api-configuration">Configuration</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/dom-testing-library/faq">FAQ</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/dom-testing-library/cheatsheet">Cheatsheet</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">React Testing Library</h4><ul><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/react-testing-library/intro">Introduction</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/react-testing-library/example-intro">Example</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/testing-library-docs/docs/react-testing-library/setup">Setup</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/react-testing-library/api">API</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/react-testing-library/faq">FAQ</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/react-testing-library/cheatsheet">Cheatsheet</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">ReasonReact Testing Library</h4><ul><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/bs-react-testing-library/intro">Introduction</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/bs-react-testing-library/examples">Examples</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Native Testing Library</h4><ul><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/native-testing-library/intro">Intro</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/native-testing-library/example-intro">Example</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/native-testing-library/setup">Setup</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/native-testing-library/api">API</a></li></ul></div><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/cypress-testing-library/intro">Cypress Testing Library</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/svelte-testing-library/intro">Svelte Testing Library</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/vue-testing-library/intro">Vue Testing Library</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/angular-testing-library/intro">Angular Testing Library</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/pptr-testing-library/intro">Puppeteer Testing Library</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/testcafe-testing-library/intro">Testcafe Testing Library</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Ecosystem</h3><ul class=""><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/ecosystem-user-event">user-event</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/ecosystem-jest-dom">jest-dom</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/ecosystem-bs-jest-dom">bs-jest-dom</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/ecosystem-jest-native">jest-native</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/testing-library/testing-library-docs/blob/master/docs/react-testing-library/setup.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">Setup</h1></header><article><div><span><p><code>react-testing-library</code> does not require any configuration to be used (as
+demonstrated in the example above). However, there are some things you can do
+when configuring your testing framework to reduce some boilerplate. In these
+docs we'll demonstrate configuring Jest, but you should be able to do similar
+things with <a href="#using-without-jest">any testing framework</a> (react-testing-library
+does not require that you use Jest).</p>
+<h2><a class="anchor" aria-hidden="true" id="global-config"></a><a href="#global-config" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Global Config</h2>
+<p>Adding options to your global test config can simplify the setup and teardown of
+tests in individual files.</p>
+<h3><a class="anchor" aria-hidden="true" id="cleanup"></a><a href="#cleanup" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Cleanup</h3>
+<p>You can ensure <a href="./api#cleanup"><code>cleanup</code></a> is called after each test and import
+additional assertions by adding it to the setup configuration in Jest.</p>
+<p>In Jest 24 and up, add the
+<a href="https://jestjs.io/docs/en/configuration.html#setupfilesafterenv-array"><code>setupFilesAfterEnv</code></a>
+option to your Jest config:</p>
+<pre><code class="hljs css language-javascript"><span class="token comment">// jest.config.js</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  setupFilesAfterEnv<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    <span class="token string">'react-testing-library/cleanup-after-each'</span><span class="token punctuation">,</span>
+    <span class="token comment">// ... other setup files ...</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token comment">// ... other options ...</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><details></p>
+<p><summary>Older versions of Jest</summary></p>
+<p>Jest versions 23 and below use the
+<a href="https://jestjs.io/docs/en/23.x/configuration#setuptestframeworkscriptfile-string"><code>setupTestFrameworkScriptFile</code></a>
+option in your Jest config instead of <code>setupFilesAfterEnv</code>. This setup file can
+be anywhere, for example <code>jest.setup.js</code> or <code>./utils/setupTests.js</code>.</p>
+<p>If you are using the default setup from create-react-app, this option is set to
+<code>src/setupTests.js</code>. You should create this file if it doesn't exist and put the
+setup code there.</p>
+<pre><code class="hljs css language-javascript"><span class="token comment">// jest.config.js</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  setupTestFrameworkScriptFile<span class="token punctuation">:</span> require<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">'./jest.setup.js'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token comment">// ... other options ...</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<pre><code class="hljs css language-javascript"><span class="token comment">// jest.setup.js</span>
+
+<span class="token comment">// add some helpful assertions</span>
+<span class="token keyword">import</span> <span class="token string">'jest-dom/extend-expect'</span>
+
+<span class="token comment">// this is basically: afterEach(cleanup)</span>
+<span class="token keyword">import</span> <span class="token string">'react-testing-library/cleanup-after-each'</span>
+</code></pre>
+<p></details></p>
+<h2><a class="anchor" aria-hidden="true" id="custom-render"></a><a href="#custom-render" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Custom Render</h2>
+<p>It's often useful to define a custom render method that includes things like
+global context providers, data stores, etc. To make this available globally, one
+approach is to define a utility file that re-exports everything from
+<code>react-testing-library</code>. You can replace react-testing-library with this file in
+all your imports. See <a href="#configuring-jest-with-test-utils">below</a> for a way to
+make your test util file accessible without using relative paths.</p>
+<p>The example below sets up data providers using the
+<a href="/testing-library-docs/docs/react-testing-library/api#render-options"><code>wrapper</code></a> option to <code>render</code>.</p>
+<pre><code class="hljs css language-diff">// my-component.test.js
+<span class="token deleted">- import { render, fireEvent } from 'react-testing-library';</span>
+<span class="token inserted">+ import { render, fireEvent } from '../test-utils';</span>
+</code></pre>
+<pre><code class="hljs css language-js"><span class="token comment">// test-utils.js</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> render <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-testing-library'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> ThemeProvider <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'my-ui-lib'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> TranslationProvider <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'my-i18n-lib'</span>
+<span class="token keyword">import</span> defaultStrings <span class="token keyword">from</span> <span class="token string">'i18n/en-x-default'</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">AllTheProviders</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> children <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">ThemeProvider</span></span> <span class="token attr-name">theme</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>light<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">TranslationProvider</span></span> <span class="token attr-name">messages</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>defaultStrings<span class="token punctuation">}</span></span><span class="token punctuation">></span></span>
+        <span class="token punctuation">{</span>children<span class="token punctuation">}</span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">TranslationProvider</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">ThemeProvider</span></span><span class="token punctuation">></span></span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">customRender</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">ui<span class="token punctuation">,</span> options</span><span class="token punctuation">)</span> <span class="token operator">=></span>
+  <span class="token function">render</span><span class="token punctuation">(</span>ui<span class="token punctuation">,</span> <span class="token punctuation">{</span> wrapper<span class="token punctuation">:</span> AllTheProviders<span class="token punctuation">,</span> <span class="token operator">...</span>options <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">// re-export everything</span>
+<span class="token keyword">export</span> <span class="token operator">*</span> <span class="token keyword">from</span> <span class="token string">'react-testing-library'</span>
+
+<span class="token comment">// override render method</span>
+<span class="token keyword">export</span> <span class="token punctuation">{</span> customRender <span class="token keyword">as</span> render <span class="token punctuation">}</span>
+</code></pre>
+<blockquote>
+<p><strong>Note</strong></p>
+<p>Babel versions lower than 7 throw an error when trying to override the named
+export in the example above. See
+<a href="https://github.com/testing-library/react-testing-library/issues/169">#169</a>
+and the workaround below.</p>
+</blockquote>
+<p><details>
+<summary>Workaround for Babel 6</summary></p>
+<p>You can use CommonJS modules instead of ES modules, which should work in Node:</p>
+<pre><code class="hljs css language-js"><span class="token comment">// test-utils.js</span>
+<span class="token keyword">const</span> rtl <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'react-testing-library'</span><span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">customRender</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">ui<span class="token punctuation">,</span> options</span><span class="token punctuation">)</span> <span class="token operator">=></span>
+  rtl<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span>ui<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    myDefaultOption<span class="token punctuation">:</span> <span class="token string">'something'</span><span class="token punctuation">,</span>
+    <span class="token operator">...</span>options<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token operator">...</span>rtl<span class="token punctuation">,</span>
+  render<span class="token punctuation">:</span> customRender<span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p></details></p>
+<h3><a class="anchor" aria-hidden="true" id="configuring-jest-with-test-utils"></a><a href="#configuring-jest-with-test-utils" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Configuring Jest with Test Utils</h3>
+<p>To make your custom test file accessible in your Jest test files without using
+relative imports (<code>../../test-utils</code>), add the folder containing the file to the
+Jest <code>moduleDirectories</code> option.</p>
+<p>This will make all the <code>.js</code> files in the test-utils directory importable
+without <code>../</code>.</p>
+<pre><code class="hljs css language-diff">// my-component.test.js
+<span class="token deleted">- import { render, fireEvent } from '../test-utils';</span>
+<span class="token inserted">+ import { render, fireEvent } from 'test-utils';</span>
+</code></pre>
+<pre><code class="hljs css language-diff">// jest.config.js
+module.exports = {
+  moduleDirectories: [
+    'node_modules',
+<span class="token inserted">+   // add the directory with the test-utils.js file, for example:</span>
+<span class="token inserted">+   'utils', // a utility folder</span>
+<span class="token inserted">+    __dirname, // the root directory</span>
+  ],
+  // ... other options ...
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="jest-and-create-react-app"></a><a href="#jest-and-create-react-app" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Jest and Create React App</h3>
+<p>If your project is based on top of Create React App, to make the <code>test-utils</code>
+file accessible without using relative imports, you just need to create a <code>.env</code>
+file in the root of your project with the following configuration:</p>
+<pre><code class="hljs"><span class="token comment">// Create React App project structure</span>
+
+$ app
+<span class="token punctuation">.</span>
+├── <span class="token punctuation">.</span>env
+├── src
+│   ├── utils
+│   │  └── test<span class="token operator">-</span>utils<span class="token punctuation">.</span>js
+│
+</code></pre>
+<pre><code class="hljs"><span class="token comment">// .env</span>
+
+<span class="token comment">// example if your utils folder is inside the /src directory.</span>
+<span class="token constant">NODE_PATH</span><span class="token operator">=</span>src<span class="token operator">/</span>utils
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="using-without-jest"></a><a href="#using-without-jest" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using without Jest</h2>
+<p>If you're running your tests in the browser bundled with webpack (or similar)
+then <code>react-testing-library</code> should work out of the box for you. However, most
+people using react-testing-library are using it with the Jest testing framework
+with the <code>testEnvironment</code> set to <code>jest-environment-jsdom</code> (which is the default
+configuration with Jest).</p>
+<p><code>jsdom</code> is a pure JavaScript implementation of the DOM and browser APIs that
+runs in node. If you're not using Jest and you would like to run your tests in
+Node, then you must install jsdom yourself. There's also a package called
+<code>jsdom-global</code> which can be used to setup the global environment to simulate the
+browser APIs.</p>
+<p>First, install <code>jsdom</code> and <code>jsdom-global</code>.</p>
+<pre><code class="hljs">npm install <span class="token operator">--</span>save<span class="token operator">-</span>dev jsdom jsdom<span class="token operator">-</span>global
+</code></pre>
+<p>With mocha, the test command would look something like this:</p>
+<pre><code class="hljs">mocha <span class="token operator">--</span>require jsdom<span class="token operator">-</span>global<span class="token operator">/</span>register
+</code></pre>
+<p>Note, depending on the version of Node you're running, you may also need to
+install @babel/polyfill (if you're using babel 7) or babel-polyfill (for babel
+6).</p>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 5/3/2019</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/testing-library-docs/docs/react-testing-library/example-intro"><span class="arrow-prev">← </span><span>Example</span></a><a class="docs-next button" href="/testing-library-docs/docs/react-testing-library/api"><span>API</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#global-config">Global Config</a><ul class="toc-headings"><li><a href="#cleanup">Cleanup</a></li></ul></li><li><a href="#custom-render">Custom Render</a><ul class="toc-headings"><li><a href="#configuring-jest-with-test-utils">Configuring Jest with Test Utils</a></li><li><a href="#jest-and-create-react-app">Jest and Create React App</a></li></ul></li><li><a href="#using-without-jest">Using without Jest</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/testing-library-docs/" class="nav-home"><img src="/testing-library-docs/img/octopus-128x128.png" alt="Testing Library" width="66" height="58"/></a><div><h5>Docs</h5><a href="/testing-library-docs/docs/intro">Getting Started</a><a href="/testing-library-docs/docs/example-codesandbox">Examples</a><a href="/testing-library-docs/docs/dom-testing-library/api-queries">API</a><a href="/testing-library-docs/docs/dom-testing-library/faq">Help</a></div><div><h5>Community</h5><a href="/testing-library-docs/blog">Blog</a><a target="_blank" rel="noreferrer noopener" href="https://stackoverflow.com/questions/tagged/react-testing-library">Stack Overflow</a><a target="_blank" rel="noreferrer noopener" href="https://www.reactiflux.com/">Reactiflux on Discord</a><a target="_blank" rel="noreferrer noopener" href="https://spectrum.chat/testing-library">Spectrum</a></div><div><h5>More</h5><a target="_blank" rel="noreferrer noopener" class="github-button" href="https://github.com/testing-library/react-testing-library" data-icon="octicon-star" data-count-href="/testing-library/react-testing-library/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a><a target="_blank" rel="noreferrer noopener" href="https://github.com/testing-library">GitHub</a><a target="_blank" rel="noreferrer noopener" href="https://github.com/testing-library/testing-library-docs">Edit Docs on GitHub</a></div></section><section class="copyright">Copyright © 2018-2019 Kent C. Dodds and contributors</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: 'bda29e6557dc5be1ce5c05f2dbff8f33',
+                indexName: 'testing-library',
+                inputSelector: '#search_input_react'
+              });
+            </script></body></html>

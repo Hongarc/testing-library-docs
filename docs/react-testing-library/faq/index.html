@@ -1,0 +1,225 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>FAQ · Testing Library</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;See also the &lt;a href=&quot;/testing-library-docs/docs/dom-testing-library/faq&quot;&gt;main FAQ&lt;/a&gt; for questions not specific&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="FAQ · Testing Library"/><meta property="og:type" content="website"/><meta property="og:url" content="https://hongarc.github.io/testing-library-docs/"/><meta property="og:description" content="&lt;p&gt;See also the &lt;a href=&quot;/testing-library-docs/docs/dom-testing-library/faq&quot;&gt;main FAQ&lt;/a&gt; for questions not specific&lt;/p&gt;
+"/><meta property="og:image" content="https://hongarc.github.io/testing-library-docs/img/octopus-128x128.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://hongarc.github.io/testing-library-docs/img/octopus-128x128.png"/><link rel="shortcut icon" href="/testing-library-docs/img/octopus-32x32.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://hongarc.github.io/testing-library-docs/blog/atom.xml" title="Testing Library Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://hongarc.github.io/testing-library-docs/blog/feed.xml" title="Testing Library Blog RSS Feed"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-137787095-1', 'auto');
+              ga('send', 'pageview');
+            </script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:500,700|Source+Code+Pro:500,700|Source+Sans+Pro:400,400i,700"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script type="text/javascript" src="/js/sidenav.js"></script><link rel="stylesheet" href="/testing-library-docs/css/prism.css"/><link rel="stylesheet" href="/testing-library-docs/css/main.css"/><script src="/testing-library-docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/testing-library-docs/"><img class="logo" src="/testing-library-docs/img/octopus-64x64.png" alt="Testing Library"/><h2 class="headerTitleWithLogo">Testing Library</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/testing-library-docs/docs/intro" target="_self">Docs</a></li><li class=""><a href="/testing-library-docs/docs/recipes" target="_self">Recipes</a></li><li class=""><a href="/testing-library-docs/help" target="_self">Help</a></li><li class=""><a href="/testing-library-docs/blog/" target="_self">Blog</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>React Testing Library</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Getting Started</h3><ul class=""><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/intro">Introduction</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/guiding-principles">Guiding Principles</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Frameworks</h3><ul class=""><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">DOM Testing Library</h4><ul><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/dom-testing-library/intro">Introduction</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/dom-testing-library/install">Install</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/dom-testing-library/example-intro">Example</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/dom-testing-library/setup">Setup</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/dom-testing-library/api-queries">Queries</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/dom-testing-library/api-events">Firing Events</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/dom-testing-library/api-async">Async Utilities</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/dom-testing-library/api-helpers">Helpers</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/dom-testing-library/api-configuration">Configuration</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/dom-testing-library/faq">FAQ</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/dom-testing-library/cheatsheet">Cheatsheet</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">React Testing Library</h4><ul><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/react-testing-library/intro">Introduction</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/react-testing-library/example-intro">Example</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/react-testing-library/setup">Setup</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/react-testing-library/api">API</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/testing-library-docs/docs/react-testing-library/faq">FAQ</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/react-testing-library/cheatsheet">Cheatsheet</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">ReasonReact Testing Library</h4><ul><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/bs-react-testing-library/intro">Introduction</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/bs-react-testing-library/examples">Examples</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Native Testing Library</h4><ul><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/native-testing-library/intro">Intro</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/native-testing-library/example-intro">Example</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/native-testing-library/setup">Setup</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/native-testing-library/api">API</a></li></ul></div><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/cypress-testing-library/intro">Cypress Testing Library</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/svelte-testing-library/intro">Svelte Testing Library</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/vue-testing-library/intro">Vue Testing Library</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/angular-testing-library/intro">Angular Testing Library</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/pptr-testing-library/intro">Puppeteer Testing Library</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/testcafe-testing-library/intro">Testcafe Testing Library</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Ecosystem</h3><ul class=""><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/ecosystem-user-event">user-event</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/ecosystem-jest-dom">jest-dom</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/ecosystem-bs-jest-dom">bs-jest-dom</a></li><li class="navListItem"><a class="navItem" href="/testing-library-docs/docs/ecosystem-jest-native">jest-native</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/testing-library/testing-library-docs/blob/master/docs/react-testing-library/faq.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">FAQ</h1></header><article><div><span><p>See also the <a href="/testing-library-docs/docs/dom-testing-library/faq">main FAQ</a> for questions not specific
+to React testing</p>
+<p><details></p>
+<p><summary>How do I test input onChange handlers?</summary></p>
+<p>TL;DR:
+<a href="https://codesandbox.io/s/github/kentcdodds/react-testing-library-examples/tree/master/?module=%2Fsrc%2F__tests__%2Fon-change.js&amp;previewwindow=tests">Go to the <code>on-change.js</code> example</a></p>
+<p>In summary:</p>
+<pre><code class="hljs css language-javascript"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span>
+<span class="token keyword">import</span> <span class="token string">'react-testing-library/cleanup-after-each'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> render<span class="token punctuation">,</span> fireEvent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-testing-library'</span>
+
+<span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'change values via the fireEvent.change method'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> handleChange <span class="token operator">=</span> jest<span class="token punctuation">.</span><span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> container <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">render</span><span class="token punctuation">(</span><span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text"</span> onChange<span class="token operator">=</span><span class="token punctuation">{</span>handleChange<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span><span class="token punctuation">)</span>
+  <span class="token keyword">const</span> input <span class="token operator">=</span> container<span class="token punctuation">.</span>firstChild
+  fireEvent<span class="token punctuation">.</span><span class="token function">change</span><span class="token punctuation">(</span>input<span class="token punctuation">,</span> <span class="token punctuation">{</span> target<span class="token punctuation">:</span> <span class="token punctuation">{</span> value<span class="token punctuation">:</span> <span class="token string">'a'</span> <span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token function">expect</span><span class="token punctuation">(</span>handleChange<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toHaveBeenCalledTimes</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+  <span class="token function">expect</span><span class="token punctuation">(</span>input<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toBe</span><span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'checkboxes (and radios) must use fireEvent.click'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> handleChange <span class="token operator">=</span> jest<span class="token punctuation">.</span><span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> container <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">render</span><span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"checkbox"</span> onChange<span class="token operator">=</span><span class="token punctuation">{</span>handleChange<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span>
+  <span class="token punctuation">)</span>
+  <span class="token keyword">const</span> checkbox <span class="token operator">=</span> container<span class="token punctuation">.</span>firstChild
+  fireEvent<span class="token punctuation">.</span><span class="token function">click</span><span class="token punctuation">(</span>checkbox<span class="token punctuation">)</span>
+  <span class="token function">expect</span><span class="token punctuation">(</span>handleChange<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toHaveBeenCalledTimes</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+  <span class="token function">expect</span><span class="token punctuation">(</span>checkbox<span class="token punctuation">.</span>checked<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toBe</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<p>If you've used enzyme or React's TestUtils, you may be accustomed to changing
+inputs like so:</p>
+<pre><code class="hljs css language-javascript">input<span class="token punctuation">.</span>value <span class="token operator">=</span> <span class="token string">'a'</span>
+Simulate<span class="token punctuation">.</span><span class="token function">change</span><span class="token punctuation">(</span>input<span class="token punctuation">)</span>
+</code></pre>
+<p>We can't do this with react-testing-library because React actually keeps track
+of any time you assign the <code>value</code> property on an <code>input</code> and so when you fire
+the <code>change</code> event, React thinks that the value hasn't actually been changed.</p>
+<p>This works for Simulate because they use internal APIs to fire special simulated
+events. With react-testing-library, we try to avoid implementation details to
+make your tests more resiliant.</p>
+<p>So we have it worked out for the change event handler to set the property for
+you in a way that's not trackable by React. This is why you must pass the value
+as part of the <code>change</code> method call.</p>
+<p></details></p>
+<p><details></p>
+<p><summary>Can I write unit tests with this library?</summary></p>
+<p>Definitely yes! You can write unit and integration tests with this library. See
+below for more on how to mock dependencies (because this library intentionally
+does NOT support shallow rendering) if you want to unit test a high level
+component. The tests in this project show several examples of unit testing with
+this library.</p>
+<p>As you write your tests, keep in mind:</p>
+<blockquote>
+<p>The more your tests resemble the way your software is used, the more
+confidence they can give you. - <a href="https://twitter.com/kentcdodds/status/977018512689455106">17 Feb 2018</a></p>
+</blockquote>
+<p></details></p>
+<p><details></p>
+<p><summary>If I can't use shallow rendering, how do I mock out components in tests?</summary></p>
+<p>In general, you should avoid mocking out components (see
+<a href="/testing-library-docs/docs/guiding-principles">the Guiding Principles section</a>). However if you need
+to, then it's pretty trivial using
+<a href="https://facebook.github.io/jest/docs/en/manual-mocks.html">Jest's mocking feature</a>.
+One case that I've found mocking to be especially useful is for animation
+libraries. I don't want my tests to wait for animations to end.</p>
+<pre><code class="hljs css language-javascript">jest<span class="token punctuation">.</span><span class="token function">mock</span><span class="token punctuation">(</span><span class="token string">'react-transition-group'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> FakeTransition <span class="token operator">=</span> jest<span class="token punctuation">.</span><span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> children <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=></span> children<span class="token punctuation">)</span>
+  <span class="token keyword">const</span> FakeCSSTransition <span class="token operator">=</span> jest<span class="token punctuation">.</span><span class="token function">fn</span><span class="token punctuation">(</span><span class="token parameter">props</span> <span class="token operator">=></span>
+    props<span class="token punctuation">.</span>in <span class="token operator">?</span> <span class="token operator">&lt;</span>FakeTransition<span class="token operator">></span><span class="token punctuation">{</span>props<span class="token punctuation">.</span>children<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>FakeTransition<span class="token operator">></span> <span class="token punctuation">:</span> <span class="token keyword">null</span>
+  <span class="token punctuation">)</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span> CSSTransition<span class="token punctuation">:</span> FakeCSSTransition<span class="token punctuation">,</span> Transition<span class="token punctuation">:</span> FakeTransition <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'you can mock things with jest.mock'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> getByTestId<span class="token punctuation">,</span> queryByTestId <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">render</span><span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>HiddenMessage initialShow<span class="token operator">=</span><span class="token punctuation">{</span><span class="token boolean">true</span><span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span>
+  <span class="token punctuation">)</span>
+  <span class="token function">expect</span><span class="token punctuation">(</span><span class="token function">queryByTestId</span><span class="token punctuation">(</span><span class="token string">'hidden-message'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toBeTruthy</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// we just care it exists</span>
+  <span class="token comment">// hide the message</span>
+  fireEvent<span class="token punctuation">.</span><span class="token function">click</span><span class="token punctuation">(</span><span class="token function">getByTestId</span><span class="token punctuation">(</span><span class="token string">'toggle-message'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token comment">// in the real world, the CSSTransition component would take some time</span>
+  <span class="token comment">// before finishing the animation which would actually hide the message.</span>
+  <span class="token comment">// So we've mocked it out for our tests to make it happen instantly</span>
+  <span class="token function">expect</span><span class="token punctuation">(</span><span class="token function">queryByTestId</span><span class="token punctuation">(</span><span class="token string">'hidden-message'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toBeNull</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// we just care it doesn't exist</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<p>Note that because they're Jest mock functions (<code>jest.fn()</code>), you could also make
+assertions on those as well if you wanted.</p>
+<p><a href="/testing-library-docs/docs/example-react-transition-group">Open full test</a> for the full example.</p>
+<p>This looks like more work that shallow rendering (and it is), but it gives you
+more confidence so long as your mock resembles the thing you're mocking closely
+enough.</p>
+<p>If you want to make things more like shallow rendering, then you could do
+something more [like this](<a href="/testing-library-docs/docs/example-react-transition-group">Open full test</a>
+).</p>
+<p>Learn more about how Jest mocks work from my blog post:
+<a href="https://blog.kentcdodds.com/but-really-what-is-a-javascript-mock-10d060966f7d">&quot;But really, what is a JavaScript mock?&quot;</a></p>
+<p></details></p>
+<p><details></p>
+<p><summary>What about enzyme is &quot;bloated with complexity and features&quot; and &quot;encourage
+poor testing practices&quot;?</summary></p>
+<p>Most of the damaging features have to do with encouraging testing implementation
+details. Primarily, these are
+<a href="http://airbnb.io/enzyme/docs/api/shallow.html">shallow rendering</a>, APIs which
+allow selecting rendered elements by component constructors, and APIs which
+allow you to get and interact with component instances (and their
+state/properties) (most of enzyme's wrapper APIs allow this).</p>
+<p>The guiding principle for this library is:</p>
+<blockquote>
+<p>The more your tests resemble the way your software is used, the more
+confidence they can give you. - <a href="https://twitter.com/kentcdodds/status/977018512689455106">17 Feb 2018</a></p>
+</blockquote>
+<p>Because users can't directly interact with your app's component instances,
+assert on their internal state or what components they render, or call their
+internal methods, doing those things in your tests reduce the confidence they're
+able to give you.</p>
+<p>That's not to say that there's never a use case for doing those things, so they
+should be possible to accomplish, just not the default and natural way to test
+react components.</p>
+<p></details></p>
+<p><details></p>
+<p><summary>Why isn't snapshot diffing working?</summary></p>
+<p>If you use the <a href="https://github.com/jest-community/snapshot-diff">snapshot-diff</a>
+library to save snapshot diffs, it won't work out of the box because this
+library uses the DOM which is mutable. Changes don't return new objects so
+snapshot-diff will think it's the same object and avoid diffing it.</p>
+<p>Luckily there's an easy way to make it work: clone the DOM when passing it into
+snapshot-diff. It looks like this:</p>
+<pre><code class="hljs css language-js"><span class="token keyword">const</span> firstVersion <span class="token operator">=</span> container<span class="token punctuation">.</span><span class="token function">cloneNode</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span>
+<span class="token comment">// Do some changes</span>
+<span class="token function">snapshotDiff</span><span class="token punctuation">(</span>firstVersion<span class="token punctuation">,</span> container<span class="token punctuation">.</span><span class="token function">cloneNode</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<p></details></p>
+<!--
+Links:
+-->
+<!-- prettier-ignore-start -->
+<!-- prettier-ignore-end -->
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 5/3/2019</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/testing-library-docs/docs/react-testing-library/api"><span class="arrow-prev">← </span><span>API</span></a><a class="docs-next button" href="/testing-library-docs/docs/react-testing-library/cheatsheet"><span>Cheatsheet</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/testing-library-docs/" class="nav-home"><img src="/testing-library-docs/img/octopus-128x128.png" alt="Testing Library" width="66" height="58"/></a><div><h5>Docs</h5><a href="/testing-library-docs/docs/intro">Getting Started</a><a href="/testing-library-docs/docs/example-codesandbox">Examples</a><a href="/testing-library-docs/docs/dom-testing-library/api-queries">API</a><a href="/testing-library-docs/docs/dom-testing-library/faq">Help</a></div><div><h5>Community</h5><a href="/testing-library-docs/blog">Blog</a><a target="_blank" rel="noreferrer noopener" href="https://stackoverflow.com/questions/tagged/react-testing-library">Stack Overflow</a><a target="_blank" rel="noreferrer noopener" href="https://www.reactiflux.com/">Reactiflux on Discord</a><a target="_blank" rel="noreferrer noopener" href="https://spectrum.chat/testing-library">Spectrum</a></div><div><h5>More</h5><a target="_blank" rel="noreferrer noopener" class="github-button" href="https://github.com/testing-library/react-testing-library" data-icon="octicon-star" data-count-href="/testing-library/react-testing-library/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a><a target="_blank" rel="noreferrer noopener" href="https://github.com/testing-library">GitHub</a><a target="_blank" rel="noreferrer noopener" href="https://github.com/testing-library/testing-library-docs">Edit Docs on GitHub</a></div></section><section class="copyright">Copyright © 2018-2019 Kent C. Dodds and contributors</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: 'bda29e6557dc5be1ce5c05f2dbff8f33',
+                indexName: 'testing-library',
+                inputSelector: '#search_input_react'
+              });
+            </script></body></html>
